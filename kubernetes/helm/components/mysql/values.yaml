@@ -1,0 +1,18 @@
+fullnameOverride: mysql
+
+image:
+  repository: registry.hub.docker.com/library
+  name: mysql
+  # [N]:arm64]:mysql8
+  tag: 8.0.31
+  pullPolicy: IfNotPresent
+  # [N]:arm64]:mysql8 See https://stackoverflow.com/a/64284869/904231
+  # args:
+  #   - "--ignore-db-dir=lost+found"
+ports:
+  - containerPort: 3306
+
+service:
+  ports:
+    - port: 3306
+

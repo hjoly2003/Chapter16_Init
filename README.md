@@ -30,7 +30,7 @@ In this text, you will notice annotations of the form `]:topic`. These annotatio
 * [me]:mapstruct - As introduced in Chapter 6, I use MapStruct to transform the model classes into entity objects. Since my Visual Studio Code has no support for creating *Mapper Implementation classes* in the bin directories, I had to include an extra step in the build process of certain `build.gradle` files.
 
 # ]:test]:dev - Deploying to Kubernetes for development and test
-
+<a id="deploy_and_test_id"></a>
 To be able to run functional tests, we will deploy the microservices together with the
 resource managers they require in the same [*Namespace*](https://github.com/hjoly2003/cribs/blob/master/Kubernetes/kubernetes_jargon.md#namespace_id), which we will call `handson`. This makes it easy to set up a test environment, but also to remove it once we are
 done with it.
@@ -61,9 +61,19 @@ kubectl get pods --namespace=kube-system
 ```
 Now, we can perform the deployment of the microservices.
 ```bash
-cd $BOOK_HOME/Chapter16
-eval $(minikube docker-env)
+cd $BOOK_HOME/Chapter16_Init
 
+eval $(minikube docker-env)
+```
+On my computer, invoking `minikube docker-env` yields the following: 
+```bash
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://127.0.0.1:49940"
+export DOCKER_CERT_PATH="/Users/utilisationnormale/.minikube/certs"
+export MINIKUBE_ACTIVE_DOCKERD="handson-spring-boot-cloud"
+```
+Continuing with the deployment...
+```bash
 # To get rid of previously generated helm *.tgz charts
 find kubernetes -type d -name 'charts' -exec rm -fr {} +
 gradle clean classes
@@ -141,8 +151,24 @@ kubectl get pods -o json | jq '.items[].spec.containers[].image'
 MINIKUBE_HOST=$(minikube ip)
 
 # Check that the actuator health can be invoked
-curl -k https://$HOST:30443/actuator/health | jq
-
-# Then, start the tests
+curl -k https://$MINIKUBE_HOST:30443/actuator/health | jq
+```
+When "curling" the actuator, I never get any reply.
+```bash
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:--  0:01:15 --:--:--     0
+curl: (28) Failed to connect to 192.168.67.2 port 30443 after 75005 ms: Operation timed out
+```
+Then, when I start the tests...
+```bash
 HOST=$MINIKUBE_HOST PORT=30443 USE_K8S=true ./test-em-all.bash
+```
+It never completes...
+```bash
+HOST=192.168.67.2
+PORT=30443
+USE_K8S=true
+SKIP_CB_TESTS=false
+Wait for: curl -k https://192.168.67.2:30443/actuator/health... , retry #1 , retry #2 , retry #3 , retry #4 , retry #5 , retry #6 , retry #7 , retry #8
 ```

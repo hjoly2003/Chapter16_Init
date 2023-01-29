@@ -2,11 +2,21 @@
 
 In this text, you will notice annotations of the form `]:topic`. These annotations can be found in the source code where the topic applies.
 
+# Versions of my OS and tools
+* Mac M1: the problem with `test-em-all.bash` could be reproduced on BigSur 11.7.2 and Ventura 13.1.
+  * 16 G of RAM  
+  * 8 Pocessors
+* Docker Desktop: v4.15.0
+* Docker: v20.10.20
+* Kubernetes: v1.25.0
+* minikube: v1.28.0 (see [cluster-boot-up.md](./cluster-boot-up.md) to see the output of minikube when I started the cluster)
+* kubectl: v1.25.4
+
 # Status of the Source Code
 
 * The unit tests triggered by the build process work only outside of a Kubernetes environment. 
 * Build tests & `test-em-all.bash` don't work once a Kubernetes cluster is running.
-  * For `gradle build`, we get the following output:
+  * <a id="unit_tests_id"></a>For `gradle build`, we get the following output:
     ```bash
     ...
     > Task :microservices:product-service:test
@@ -19,25 +29,20 @@ In this text, you will notice annotations of the form `]:topic`. These annotatio
         java.lang.NoClassDefFoundError at NativeConstructorAccessorImpl.java:-2
     ...        
     ```
-    The `NoClassDefFoundError` is also thrown for the other tests of `PersistenceTests` and `ProductServiceApplicationTests`.
-  * `test-em-all.bash` the script waits for ever to conntect to the actuator health:
+    The `NoClassDefFoundError` is also thrown for the other tests of `PersistenceTests` and `ProductServiceApplicationTests`.  
+
+  * The `test-em-all.bash` script waits for ever to conntect to the actuator health:
     ```bash
     curl -k https://$HOST:30443/actuator/health
     ```
 
-* ]:arm64 - Since I have a Mac M1, I'm using Docker images to support the ARM64 achitecture (see [Develop, build and deploy microservices on Apple silicon (ARM64) | Callista](https://callistaenterprise.se/blogg/teknik/2022/11/02/microservices-on-apple-silicon/)).
-* ]:arm64]:mysql8 - Since version 8, some settings are required to get the mysql server successfully started.
-* [me]:mapstruct - As introduced in Chapter 6, I use MapStruct to transform the model classes into entity objects. Since my Visual Studio Code has no support for creating *Mapper Implementation classes* in the bin directories, I had to include an extra step in the build process of certain `build.gradle` files.
+* <a id="arm64_id"></a>]:arm64 - Since I have a Mac M1, I'm using Docker images to support the ARM64 achitecture (see [Develop, build and deploy microservices on Apple silicon (ARM64) | Callista](https://callistaenterprise.se/blogg/teknik/2022/11/02/microservices-on-apple-silicon/)).
+* ]:arm64]:mysql8 - Since version 8 of MySql, some settings were required to get the mysql server successfully started. To see a summary of the changes, search the code for "]:arm64".
+* ]:mapstruct - As introduced in Chapter 6, I use `MapStruct` to transform *model* classes into *entity objects*. Since my Visual Studio Code has no support for creating *Mapper Implementation classes* in the bin directories, I had to include an extra step in the build process of certain `build.gradle` files.
 
 # ]:test]:dev - Deploying to Kubernetes for development and test
 <a id="deploy_and_test_id"></a>
-To be able to run functional tests, we will deploy the microservices together with the
-resource managers they require in the same [*Namespace*](https://github.com/hjoly2003/cribs/blob/master/Kubernetes/kubernetes_jargon.md#namespace_id), which we will call `handson`. This makes it easy to set up a test environment, but also to remove it once we are
-done with it.
-
-![Resource managers deployed in the same Kubernetes Namespace as the microservices in the dev environment](./B17218_16_02.png)
-
-But prior to the deployment, we need to create a Kubernetes cluster (See [Creating a Kubernetes cluster](../Chapter15/README.md#cluster_creation_id)):
+First, I created a Kubernetes cluster:
 ```bash
 unset KUBECONFIG
 
@@ -55,11 +60,11 @@ minikube start \
 
 minikube profile handson-spring-boot-cloud
 ```
-We can monitor the cluster initialization by issuing the following command:
+I could monitor the cluster initialization by issuing the following command:
 ```bash
 kubectl get pods --namespace=kube-system
 ```
-Now, we can perform the deployment of the microservices.
+Then, I have performed the deployment of the microservices.
 ```bash
 cd $BOOK_HOME/Chapter16_Init
 
@@ -86,39 +91,36 @@ gradle build -x test && docker-compose build
 for f in kubernetes/helm/components/*; do helm dep up $f; done
 for f in kubernetes/helm/environments/*; do helm dep up $f; done
 
-# Verify that the dependencies for the dev-env folder
+# I have verified the dependencies for the dev-env folder
 helm dep ls kubernetes/helm/environments/dev-env/
 
-# To avoid a slow deployment process due to Kubernetes downloading Docker images run the following docker pull commands in advance
+# Then, prior to the deployment, I ran the following docker pull commands in advance.
 docker pull mysql:8.0.31
 docker pull mongo:4.4.2
 docker pull rabbitmq:3.8.11-management
 docker pull openzipkin/zipkin:2.23.2
 
-# Render the templates to see what the manifets will look like;
-helm template kubernetes/helm/environments/dev-env
-
-# If it's not your first try...
+# If it's not the first try...
 helm uninstall hands-on-dev-env
 kubectl delete namespace hands-on
 
-# Verify that the Kubernetes cluster will accept the rendered manifest by a dry run. You can verify its output in the rendered-manifests.yml file.
+# I have verified that the Kubernetes cluster would accept the rendered manifest by a dry run. You can check its output in the rendered-manifests.yml file under the root directory of the project.
 helm install --dry-run --debug hands-on-dev-env kubernetes/helm/environments/dev-env > rendered-manifests.yml
 
-# To initiate the deployment...
+# Then I initiated the deployment per-se...
 helm install hands-on-dev-env kubernetes/helm/environments/dev-env -n hands-on --create-namespace
 
-# Set the newly created Namespace as the default Namespace for kubectl
+# And I have setted the newly created Namespace as the default Namespace for kubectl
 kubectl config set-context $(kubectl config current-context) --namespace=hands-on
 ```
 
-On a different terminal, to see the Pods starting up, type
+On a different terminal, I could see the Pods starting up:
 
 ```bash
 kubectl get pods --watch
 ```
 
-After a while, you should get the following output:
+After a while, I could get the following output:
 
 ```bash
 rabbitmq-6d7466d49c-xlhwj            1/1     Running   0             69s
@@ -134,37 +136,37 @@ review-67ccb9ffcc-ldlxd              0/1     Running   1 (5s ago)    3m21s
 mysql-7dc4845565-r96ch               1/1     Running   2 (19s ago)   69s
 ```
 
-To wait for all the Pods in the *Namespace* to be ready with the command:
+I have waited for all the Pods in the *Namespace* to be ready with the following command:
 ```bash
 kubectl wait --timeout=600s --for=condition=ready pod --all
 ```
 
-To see the Docker images that are used, run the following command:
+Finally, I ran the following command to see the Docker images that were used:
 ```bash
 kubectl get pods -o json | jq '.items[].spec.containers[].image'
 ```
 
 ## Testing the deployment
-* ]:test]:use_k8s - The test script can either use the docker-compose exec command or the corresponding kubectl command, kubectl exec, depending on if we are running the microservices using Docker Compose or Kubernetes.
+* ]:test]:use_k8s - As you know, the test script can either use the docker-compose exec command or the corresponding kubectl command, kubectl exec, depending on if we are running the microservices using Docker Compose or Kubernetes. The following trial was run with Kubernetes.
 ```bash
-# Start by setting up an environment variable for the hostname to use.
+# I started by setting up an environment variable for the hostname to use.
 MINIKUBE_HOST=$(minikube ip)
 
-# Check that the actuator health can be invoked
+# Then, I tried to invoke the actuator health
 curl -k https://$MINIKUBE_HOST:30443/actuator/health | jq
 ```
-When "curling" the actuator, I never get any reply.
+But I never got any reply.
 ```bash
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
   0     0    0     0    0     0      0      0 --:--:--  0:01:15 --:--:--     0
 curl: (28) Failed to connect to 192.168.67.2 port 30443 after 75005 ms: Operation timed out
 ```
-Then, when I start the tests...
+Then, when I started the tests...
 ```bash
 HOST=$MINIKUBE_HOST PORT=30443 USE_K8S=true ./test-em-all.bash
 ```
-It never completes...
+It has never completed...
 ```bash
 HOST=192.168.67.2
 PORT=30443

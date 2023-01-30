@@ -31,7 +31,7 @@ In this text, you will notice annotations of the form `]:topic`. These annotatio
     ```
     The `NoClassDefFoundError` is also thrown for the other tests of `PersistenceTests` and `ProductServiceApplicationTests`.  
 
-  * The `test-em-all.bash` script waits for ever to conntect to the actuator health:
+  * The `test-em-all.bash` script waits for ever to connect to the actuator health:
     ```bash
     curl -k https://$HOST:30443/actuator/health
     ```
@@ -64,7 +64,7 @@ I could monitor the cluster initialization by issuing the following command:
 ```bash
 kubectl get pods --namespace=kube-system
 ```
-Then, I have performed the deployment of the microservices.
+Then, I performed the deployment of the microservices.
 ```bash
 cd $BOOK_HOME/Chapter16_Init
 
@@ -85,13 +85,14 @@ gradle clean classes
 
 # To copy MapStruct classes in the bin directory
 gradle copyMappers
+
 gradle build -x test && docker-compose build
 
 # Resolving Helm chart dependencies
 for f in kubernetes/helm/components/*; do helm dep up $f; done
 for f in kubernetes/helm/environments/*; do helm dep up $f; done
 
-# I have verified the dependencies for the dev-env folder
+# I verified the dependencies for the dev-env folder
 helm dep ls kubernetes/helm/environments/dev-env/
 
 # Then, prior to the deployment, I ran the following docker pull commands in advance.
@@ -136,7 +137,7 @@ review-67ccb9ffcc-ldlxd              0/1     Running   1 (5s ago)    3m21s
 mysql-7dc4845565-r96ch               1/1     Running   2 (19s ago)   69s
 ```
 
-I have waited for all the Pods in the *Namespace* to be ready with the following command:
+I waited for all the Pods in the *Namespace* to be ready with the following command:
 ```bash
 kubectl wait --timeout=600s --for=condition=ready pod --all
 ```
@@ -166,7 +167,7 @@ Then, when I started the tests...
 ```bash
 HOST=$MINIKUBE_HOST PORT=30443 USE_K8S=true ./test-em-all.bash
 ```
-It has never completed...
+It never completed...
 ```bash
 HOST=192.168.67.2
 PORT=30443

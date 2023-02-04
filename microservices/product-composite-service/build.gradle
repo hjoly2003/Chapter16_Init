@@ -1,5 +1,5 @@
 plugins {
-    // [N]:arm64
+    // [N]:sb2.7
     id 'org.springframework.boot' version '2.7.3'
     id 'io.spring.dependency-management' version '1.0.13.RELEASE'
 
@@ -10,7 +10,7 @@ group = 'se.magnus.microservices.composite.product'
 version = '1.0.0-SNAPSHOT'
 sourceCompatibility = '1.8'
 ext {
-    // [N]:arm64
+    // [N]:sb2.7
     springCloudVersion = "2021.0.3"
     resilience4jVersion = "1.7.0"
 }
@@ -36,7 +36,7 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-starter-sleuth'
     implementation 'org.springframework.cloud:spring-cloud-sleuth-zipkin'
     implementation 'org.springframework.retry:spring-retry'
-     // [N]:arm64
+     // [N]:sb2.7
     implementation 'org.springdoc:springdoc-openapi-webflux-ui:1.6.10'
 
     implementation "io.github.resilience4j:resilience4j-spring-boot2:${resilience4jVersion}"

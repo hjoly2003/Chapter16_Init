@@ -1,5 +1,5 @@
 plugins {
-    // [N]:arm64
+    // [N]:sb2.7
     id 'org.springframework.boot' version '2.7.3'
     id 'io.spring.dependency-management' version '1.0.13.RELEASE'
 
@@ -12,8 +12,9 @@ sourceCompatibility = '1.8'
 
 ext {
     mapstructVersion = "1.5.2.Final"
-    // [N]:arm64
+    // [N]:sb2.7
     springCloudVersion = "2021.0.3"
+    // [N]:arm64 - The author's version was 1.16.2
 	testcontainersVersion = "1.17.3"
 }
 

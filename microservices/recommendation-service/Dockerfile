@@ -1,11 +1,11 @@
-# [N]:sb2.7
+# [N]:SB2_7
 FROM eclipse-temurin:17.0.4_8-jre-focal as builder
 
 WORKDIR extracted
 ADD ./build/libs/*.jar app.jar
 RUN java -Djarmode=layertools -jar app.jar extract
 
-# [N]:sb2.7
+# [N]:SB2_7
 FROM eclipse-temurin:17.0.4_8-jre-focal
 
 WORKDIR application

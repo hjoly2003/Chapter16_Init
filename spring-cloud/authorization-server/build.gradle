@@ -1,5 +1,5 @@
 plugins {
-    // [N]:sb2.7
+    // [N]:SB2_7
     id 'org.springframework.boot' version '2.7.3'
     id 'io.spring.dependency-management' version '1.0.13.RELEASE'
 
@@ -15,11 +15,11 @@ repositories {
 }
 
 ext {
-    // [N]:sb2.7
+    // [N]:SB2_7
     set('springCloudVersion', "2021.0.3")
 }
 
-// [N]:sb2.7
+// [N]:SB2_7
 jar {
     enabled = false
 }

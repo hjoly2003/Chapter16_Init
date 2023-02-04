@@ -40,8 +40,8 @@ In this text, you will notice annotations of the form `]:topic`. These annotatio
     curl -k https://$HOST:30443/actuator/health
     ```
 * `<a id="arm64_id"></a>`]:arm64 - Since I have a Mac M1, I'm using Docker images to support the ARM64 achitecture (see [Develop, build and deploy microservices on Apple silicon (ARM64) | Callista](https://callistaenterprise.se/blogg/teknik/2022/11/02/microservices-on-apple-silicon/)). To see a summary of the changes, search the code for "]:arm64".
-* ]:sb2.7 - Update to Spring Boot 2.7 (see [Upgrade to Spring Boot 2.7 and Spring Native 0.12 | Callista](https://callistaenterprise.se/blogg/teknik/2022/09/19/microservices-upgrade-SB2.7-SN0.12/)).
-* [?] - Some of the images that I use have a different version with respect to the author's code. Again, you can search for "[?]" to catch them.
+* ]:SB2_7 - Update to Spring Boot 2.7 (see [Upgrade to Spring Boot 2.7 and Spring Native 0.12 | Callista](https://callistaenterprise.se/blogg/teknik/2022/09/19/microservices-upgrade-SB2.7-SN0.12/)).
+* [?]:img - Some of the images that I use have a different version with respect to the author's code. Again, you can search for "[?]:img" to catch them.
 * ]:arm64]:mysql8 - Since version 8 of MySql, some settings were required to get the mysql server successfully started.
 * ]:mapstruct - As introduced in Chapter 6, I use `MapStruct` to transform *model* classes into *entity objects*. Since my Visual Studio Code has no support for creating *Mapper Implementation classes* in the bin directories, I had to include an extra step in the build process of certain `build.gradle` files.
 

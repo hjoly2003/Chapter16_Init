@@ -72,8 +72,8 @@ services:
       retries: 60
 
   mysql:
-    # [N]:arm64]:mysql8
-    image: mysql:8.0.31
+    # [N]:arm64]:mysql8 - Author's version is 8.0.30, mine was 8.0.31
+    image: mysql:8.0.30
 
     mem_limit: 512m
     ports:

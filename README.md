@@ -41,7 +41,6 @@ In this text, you will notice annotations of the form `]:topic`. These annotatio
     ```
 * `<a id="arm64_id"></a>`]:arm64 - Since I have a Mac M1, I'm using Docker images to support the ARM64 achitecture (see [Develop, build and deploy microservices on Apple silicon (ARM64) | Callista](https://callistaenterprise.se/blogg/teknik/2022/11/02/microservices-on-apple-silicon/)). To see a summary of the changes, search the code for "]:arm64".
 * ]:SB2_7 - Update to Spring Boot 2.7 (see [Upgrade to Spring Boot 2.7 and Spring Native 0.12 | Callista](https://callistaenterprise.se/blogg/teknik/2022/09/19/microservices-upgrade-SB2.7-SN0.12/)).
-* [?]:img - Some of the images that I use have a different version with respect to the author's code. Again, you can search for "[?]:img" to catch them.
 * ]:arm64]:mysql8 - Since version 8 of MySql, some settings were required to get the mysql server successfully started.
 * ]:mapstruct - As introduced in Chapter 6, I use `MapStruct` to transform *model* classes into *entity objects*. Since my Visual Studio Code has no support for creating *Mapper Implementation classes* in the bin directories, I had to include an extra step in the build process of certain `build.gradle` files.
 
@@ -115,7 +114,8 @@ for f in kubernetes/helm/environments/*; do helm dep up $f; done
 helm dep ls kubernetes/helm/environments/dev-env/
 
 # Then, prior to the deployment, I ran the following docker pull commands in advance.
-docker pull mysql:8.0.31
+# [!]:mysql - Author's version was 8.0.30, mine is 8.0.31
+docker pull mysql:8.0.30
 docker pull mongo:4.4.2
 docker pull rabbitmq:3.8.11-management
 docker pull openzipkin/zipkin:2.23.2

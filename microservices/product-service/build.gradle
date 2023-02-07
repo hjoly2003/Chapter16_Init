@@ -11,10 +11,10 @@ version = '1.0.0-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 ext {
-    // [?]:img Author's version was 1.3.1.Final
-    mapstructVersion = "1.5.2.Final"
-	// [?]:img Author's version was 1.16.2
-    testcontainersVersion = "1.17.3"
+    // [?]:img Author's version is 1.3.1.Final, mine was 1.5.2.Final
+    mapstructVersion = "1.3.1.Final"
+	// [?]:img Author's version is 1.16.2, mine was 1.17.3
+    testcontainersVersion = "1.16.2"
     // [N]:SB2_7
     springCloudVersion = "2021.0.3"
 }

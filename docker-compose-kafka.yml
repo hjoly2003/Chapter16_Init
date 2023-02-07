@@ -114,8 +114,8 @@ services:
       retries: 60
 
   mysql:
-    # [?]:img:arm64]:mysql8 - Author's version was 8.0.30
-    image: mysql:8.0.31
+    # [?]:img:arm64]:mysql8 - Author's version is 8.0.30, mine was 8.0.31
+    image: mysql:8.0.30
 
     mem_limit: 512m
     ports:
@@ -132,8 +132,8 @@ services:
       retries: 60
 
   kafka:
-    # [?]:img:arm64 - Author's image was confluentinc/cp-kafka:7.2.1
-    image: confluentinc/cp-kafka:7.3.0.arm64
+    # [?]:img:arm64 - Author's version is confluentinc/cp-kafka:7.2.1, mine was confluentinc/cp-kafka:7.3.0.arm64
+    image: confluentinc/cp-kafka:7.2.1
     restart: always
     mem_limit: 1024m
 
@@ -149,8 +149,8 @@ services:
       - zookeeper
 
   zookeeper:
-    # [?]:img:arm64 - Author's image was confluentinc/cp-zookeeper:7.2.1
-    image: confluentinc/cp-zookeeper:7.3.0
+    # [?]:img:arm64 - Author's version is confluentinc/cp-zookeeper:7.2.1, mine was confluentinc/cp-zookeeper:7.3.0
+    image: confluentinc/cp-zookeeper:7.2.1
     restart: always
 
     mem_limit: 512m

@@ -5,8 +5,8 @@ import org.springframework.test.context.DynamicPropertySource;
 import org.testcontainers.containers.MySQLContainer;
 
 public abstract class MySqlTestBase {
-  // [N]:arm64]:mysql8
-  private static MySQLContainer database = new MySQLContainer("mysql:8.0.31");
+  // [N]:arm64]:mysql8 - Author's version is 8.0.30, mine was 8.0.31
+  private static MySQLContainer database = new MySQLContainer("mysql:8.0.30");
 
   static {
     database.start();

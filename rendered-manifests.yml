@@ -1,6 +1,6 @@
 NAME: hands-on-dev-env
-LAST DEPLOYED: Sun Jan 29 19:21:09 2023
-NAMESPACE: default
+LAST DEPLOYED: Wed Feb  8 07:52:18 2023
+NAMESPACE: hands-on
 STATUS: pending-install
 REVISION: 1
 TEST SUITE: None
@@ -420,7 +420,7 @@ mysql:
     name: mysql
     pullPolicy: IfNotPresent
     repository: registry.hub.docker.com/library
-    tag: 8.0.31
+    tag: 8.0.30
   ports:
   - containerPort: 3306
   resources:
@@ -1843,7 +1843,7 @@ spec:
     spec:
       containers:
         - name: mysql
-          image: "registry.hub.docker.com/library/mysql:8.0.31"
+          image: "registry.hub.docker.com/library/mysql:8.0.30"
           imagePullPolicy: IfNotPresent
           env:
           - name: MYSQL_DATABASE

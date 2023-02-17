@@ -114,7 +114,7 @@ for f in kubernetes/helm/environments/*; do helm dep up $f; done
 helm dep ls kubernetes/helm/environments/dev-env/
 
 # Then, prior to the deployment, I ran the following docker pull commands in advance.
-# [!]:mysql - Author's version was 8.0.30, mine is 8.0.31
+# [!]:mysql - Author's version is 8.0.30, mine was 8.0.31
 docker pull mysql:8.0.30
 docker pull mongo:4.4.2
 docker pull rabbitmq:3.8.11-management
@@ -130,7 +130,7 @@ helm install --dry-run --debug hands-on-dev-env kubernetes/helm/environments/dev
 # Then I initiated the deployment per-se...
 helm install hands-on-dev-env kubernetes/helm/environments/dev-env -n hands-on --create-namespace
 
-# And I have setted the newly created Namespace as the default Namespace for kubectl
+# And I have set the newly created Namespace as the default Namespace for kubectl
 kubectl config set-context $(kubectl config current-context) --namespace=hands-on
 ```
 

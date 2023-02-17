@@ -1,0 +1,56 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.3)
+
+2023-02-17 14:56:13.147  INFO [review,,] 1 --- [           main] s.m.m.c.review.ReviewServiceApplication  : Starting ReviewServiceApplication using Java 17.0.4 on review-6f657fbbc6-2h2bw with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-02-17 14:56:13.152 DEBUG [review,,] 1 --- [           main] s.m.m.c.review.ReviewServiceApplication  : Running with Spring Boot v2.7.3, Spring v5.3.22
+2023-02-17 14:56:13.153  INFO [review,,] 1 --- [           main] s.m.m.c.review.ReviewServiceApplication  : The following 1 profile is active: "docker"
+2023-02-17 14:56:13.226  INFO [review,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888
+2023-02-17 14:56:13.227  INFO [review,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://config-server:8888. Will be trying the next url if available
+2023-02-17 14:56:13.227  INFO [review,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888
+2023-02-17 14:56:13.227  INFO [review,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://config-server:8888. Will be trying the next url if available
+2023-02-17 14:56:13.227  INFO [review,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888
+2023-02-17 14:56:13.227  INFO [review,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=review, profiles=[docker], label=null, version=null, state=null
+2023-02-17 14:56:15.375  INFO [review,,] 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-02-17 14:56:15.759  INFO [review,,] 1 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 364 ms. Found 1 JPA repository interfaces.
+2023-02-17 14:56:16.382  INFO [review,,] 1 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-02-17 14:56:16.409  INFO [review,,] 1 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-02-17 14:56:16.602  INFO [review,,] 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=4a68420c-e8e6-32a4-aae0-e0e94f11a98a
+2023-02-17 14:56:17.734  INFO [review,,] 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-17 14:56:17.746  INFO [review,,] 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-17 14:56:19.082  INFO [review,,] 1 --- [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-02-17 14:56:19.155  INFO [review,,] 1 --- [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.10.Final
+2023-02-17 14:56:19.474  INFO [review,,] 1 --- [           main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-02-17 14:56:19.749  INFO [review,,] 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-02-17 14:56:21.031  INFO [review,,] 1 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-02-17 14:56:21.084  INFO [review,,] 1 --- [           main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-02-17 14:56:23.699 DEBUG [review,,] 1 --- [           main] org.hibernate.SQL                        : create table hibernate_sequence (next_val bigint) engine=InnoDB
+2023-02-17 14:56:23.762 DEBUG [review,,] 1 --- [           main] org.hibernate.SQL                        : insert into hibernate_sequence values ( 1 )
+2023-02-17 14:56:23.797 DEBUG [review,,] 1 --- [           main] org.hibernate.SQL                        : create table reviews (id integer not null, author varchar(255), content varchar(255), product_id integer not null, review_id integer not null, subject varchar(255), version integer not null, primary key (id)) engine=InnoDB
+2023-02-17 14:56:23.854 DEBUG [review,,] 1 --- [           main] org.hibernate.SQL                        : alter table reviews drop index reviews_unique_idx
+2023-02-17 14:56:23.875 DEBUG [review,,] 1 --- [           main] org.hibernate.SQL                        : alter table reviews add constraint reviews_unique_idx unique (product_id, review_id)
+2023-02-17 14:56:23.954  INFO [review,,] 1 --- [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-02-17 14:56:23.973  INFO [review,,] 1 --- [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-02-17 14:56:24.044  INFO [review,,] 1 --- [           main] s.m.m.c.review.ReviewServiceApplication  : Creates a jdbcScheduler with thread pool size = 10
+2023-02-17 14:56:28.884  INFO [review,,] 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 20 endpoint(s) beneath base path '/actuator'
+2023-02-17 14:56:29.588  INFO [review,,] 1 --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'review.messageProcessor-in-0' has 1 subscriber(s).
+2023-02-17 14:56:31.114  INFO [review,,] 1 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-02-17 14:56:31.114  INFO [review,,] 1 --- [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'review.errorChannel' has 1 subscriber(s).
+2023-02-17 14:56:31.121  INFO [review,,] 1 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2023-02-17 14:56:31.131  INFO [review,,] 1 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: rabbit
+2023-02-17 14:56:31.741  INFO [review,,] 1 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: rabbit
+2023-02-17 14:56:31.742  INFO [review,,] 1 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: rabbit
+2023-02-17 14:56:31.807  INFO [review,,] 1 --- [           main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: reviews.reviewsGroup, bound to: reviews
+2023-02-17 14:56:31.809  INFO [review,,] 1 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2023-02-17 14:56:31.854  INFO [review,,] 1 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#1d7914a5:0/SimpleConnection@539a50ea [delegate=amqp://guest@10.96.137.188:5672/, localPort= 34262]
+2023-02-17 14:56:31.976  INFO [review,,] 1 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'reviews.reviewsGroup.errors' has 1 subscriber(s).
+2023-02-17 14:56:31.977  INFO [review,,] 1 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'reviews.reviewsGroup.errors' has 2 subscriber(s).
+2023-02-17 14:56:32.004  INFO [review,,] 1 --- [           main] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.reviews.reviewsGroup'
+2023-02-17 14:56:32.083  INFO [review,,] 1 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 80
+2023-02-17 14:56:32.130  INFO [review,,] 1 --- [           main] s.m.m.c.review.ReviewServiceApplication  : Started ReviewServiceApplication in 28.392 seconds (JVM running for 29.97)
+2023-02-17 14:56:32.134  INFO [review,,] 1 --- [           main] s.m.m.c.review.ReviewServiceApplication  : Connected to MySQL: jdbc:mysql://mysql/review-db

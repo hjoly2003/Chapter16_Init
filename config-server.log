@@ -1,0 +1,48 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.3)
+
+2023-02-17 14:56:05.011  INFO 1 --- [           main] s.m.s.c.ConfigServerApplication          : Starting ConfigServerApplication using Java 17.0.4 on config-server-f474799bb-pwxfm with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-02-17 14:56:05.013  INFO 1 --- [           main] s.m.s.c.ConfigServerApplication          : The following 2 profiles are active: "docker", "native"
+2023-02-17 14:56:06.596  INFO 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=35304754-3a30-3e05-9b8e-63ee6b731c25
+2023-02-17 14:56:06.993  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8888 (http)
+2023-02-17 14:56:07.007  INFO 1 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-02-17 14:56:07.007  INFO 1 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.65]
+2023-02-17 14:56:07.060  INFO 1 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-02-17 14:56:07.060  INFO 1 --- [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1960 ms
+2023-02-17 14:56:08.273  INFO 1 --- [           main] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@3e04abc5, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@1008df1e, org.springframework.security.web.context.SecurityContextPersistenceFilter@5e541ef9, org.springframework.security.web.header.HeaderWriterFilter@70485aa, org.springframework.security.web.authentication.logout.LogoutFilter@4e8d9bb6, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@55d1f065, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@28ce75ec, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3ff8a3ad, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@7ee12d58, org.springframework.security.web.session.SessionManagementFilter@a0d875d, org.springframework.security.web.access.ExceptionTranslationFilter@19d27c27, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@26101efc]
+2023-02-17 14:56:08.649  INFO 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 15 endpoint(s) beneath base path '/actuator'
+2023-02-17 14:56:08.722  INFO 1 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8888 (http) with context path ''
+2023-02-17 14:56:08.752  INFO 1 --- [           main] s.m.s.c.ConfigServerApplication          : Started ConfigServerApplication in 5.567 seconds (JVM running for 7.0)
+2023-02-17 14:56:08.812  INFO 1 --- [           main] s.m.s.c.ConfigServerApplication          : Serving configurations from folder: file:/config-repo
+2023-02-17 14:56:11.069  INFO 1 --- [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-02-17 14:56:11.069  INFO 1 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2023-02-17 14:56:11.071  INFO 1 --- [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2023-02-17 14:56:12.045  INFO 1 --- [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/recommendation.yml]' via location 'file:/config-repo/' (document #1)
+2023-02-17 14:56:12.045  INFO 1 --- [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/recommendation.yml]' via location 'file:/config-repo/' (document #0)
+2023-02-17 14:56:12.045  INFO 1 --- [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/application.yml]' via location 'file:/config-repo/' (document #1)
+2023-02-17 14:56:12.046  INFO 1 --- [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/application.yml]' via location 'file:/config-repo/' (document #0)
+2023-02-17 14:56:12.327  INFO 1 --- [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/product-composite.yml]' via location 'file:/config-repo/' (document #1)
+2023-02-17 14:56:12.327  INFO 1 --- [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/product-composite.yml]' via location 'file:/config-repo/' (document #0)
+2023-02-17 14:56:12.327  INFO 1 --- [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/application.yml]' via location 'file:/config-repo/' (document #1)
+2023-02-17 14:56:12.327  INFO 1 --- [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/application.yml]' via location 'file:/config-repo/' (document #0)
+2023-02-17 14:56:12.755  INFO 1 --- [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/review.yml]' via location 'file:/config-repo/' (document #1)
+2023-02-17 14:56:12.755  INFO 1 --- [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/review.yml]' via location 'file:/config-repo/' (document #0)
+2023-02-17 14:56:12.755  INFO 1 --- [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/application.yml]' via location 'file:/config-repo/' (document #1)
+2023-02-17 14:56:12.755  INFO 1 --- [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/application.yml]' via location 'file:/config-repo/' (document #0)
+2023-02-17 14:56:13.300  INFO 1 --- [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/gateway.yml]' via location 'file:/config-repo/' (document #0)
+2023-02-17 14:56:13.301  INFO 1 --- [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/application.yml]' via location 'file:/config-repo/' (document #1)
+2023-02-17 14:56:13.304  INFO 1 --- [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/application.yml]' via location 'file:/config-repo/' (document #0)
+2023-02-17 14:56:15.047  INFO 1 --- [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/product.yml]' via location 'file:/config-repo/' (document #1)
+2023-02-17 14:56:15.048  INFO 1 --- [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/product.yml]' via location 'file:/config-repo/' (document #0)
+2023-02-17 14:56:15.049  INFO 1 --- [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/application.yml]' via location 'file:/config-repo/' (document #1)
+2023-02-17 14:56:15.049  INFO 1 --- [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/application.yml]' via location 'file:/config-repo/' (document #0)
+2023-02-17 14:56:16.476  INFO 1 --- [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/auth-server.yml]' via location 'file:/config-repo/' (document #1)
+2023-02-17 14:56:16.477  INFO 1 --- [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/auth-server.yml]' via location 'file:/config-repo/' (document #0)
+2023-02-17 14:56:16.478  INFO 1 --- [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/application.yml]' via location 'file:/config-repo/' (document #1)
+2023-02-17 14:56:16.478  INFO 1 --- [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/config-repo/application.yml]' via location 'file:/config-repo/' (document #0)

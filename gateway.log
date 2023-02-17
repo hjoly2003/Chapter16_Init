@@ -1,0 +1,410 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.3)
+
+2023-02-17 14:56:13.782  INFO [gateway,,] 1 --- [           main] s.m.s.gateway.GatewayApplication         : Starting GatewayApplication using Java 17.0.4 on gateway-84c4d8599f-jz7zk with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-02-17 14:56:13.784  INFO [gateway,,] 1 --- [           main] s.m.s.gateway.GatewayApplication         : The following 1 profile is active: "docker"
+2023-02-17 14:56:13.873  INFO [gateway,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888
+2023-02-17 14:56:13.873  INFO [gateway,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://config-server:8888. Will be trying the next url if available
+2023-02-17 14:56:13.873  INFO [gateway,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888
+2023-02-17 14:56:13.873  INFO [gateway,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://config-server:8888. Will be trying the next url if available
+2023-02-17 14:56:13.873  INFO [gateway,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888
+2023-02-17 14:56:13.873  INFO [gateway,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://config-server:8888. Will be trying the next url if available
+2023-02-17 14:56:13.873  INFO [gateway,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888
+2023-02-17 14:56:13.874  INFO [gateway,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=gateway, profiles=[docker], label=null, version=null, state=null
+2023-02-17 14:56:15.458 TRACE [gateway,,] 1 --- [           main] Configuration$OnVerboseDisabledCondition : Condition GatewayAutoConfiguration.OnVerboseDisabledCondition on org.springframework.cloud.gateway.config.GatewayAutoConfiguration$GatewayActuatorConfiguration#gatewayLegacyControllerEndpoint did not match due to NoneNestedConditions 1 matched 0 did not; NestedCondition on GatewayAutoConfiguration.OnVerboseDisabledCondition.VerboseDisabled @ConditionalOnProperty (spring.cloud.gateway.actuator.verbose.enabled) matched
+2023-02-17 14:56:15.468 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration$NettyConfiguration#routingFilter matched
+2023-02-17 14:56:15.468 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration$NettyConfiguration#nettyWriteResponseFilter matched
+2023-02-17 14:56:15.468 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration$NettyConfiguration#reactorNettyWebSocketClient matched
+2023-02-17 14:56:15.469 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration$NettyConfiguration#reactorNettyRequestUpgradeStrategy matched
+2023-02-17 14:56:15.515 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#adaptCachedBodyGlobalFilter matched
+2023-02-17 14:56:15.516 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#removeCachedBodyFilter matched
+2023-02-17 14:56:15.525 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#routeToRequestUrlFilter matched
+2023-02-17 14:56:15.526 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#forwardRoutingFilter matched
+2023-02-17 14:56:15.526 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#forwardPathFilter matched
+2023-02-17 14:56:15.526 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#webSocketService matched
+2023-02-17 14:56:15.526 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledGlobalFilter        : Condition OnEnabledGlobalFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#websocketRoutingFilter matched
+2023-02-17 14:56:15.527 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#weightCalculatorWebFilter matched
+2023-02-17 14:56:15.527 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#afterRoutePredicateFactory matched
+2023-02-17 14:56:15.527 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#beforeRoutePredicateFactory matched
+2023-02-17 14:56:15.527 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#betweenRoutePredicateFactory matched
+2023-02-17 14:56:15.527 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#cookieRoutePredicateFactory matched
+2023-02-17 14:56:15.527 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#headerRoutePredicateFactory matched
+2023-02-17 14:56:15.527 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#hostRoutePredicateFactory matched
+2023-02-17 14:56:15.528 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#methodRoutePredicateFactory matched
+2023-02-17 14:56:15.528 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#pathRoutePredicateFactory matched
+2023-02-17 14:56:15.528 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#queryRoutePredicateFactory matched
+2023-02-17 14:56:15.528 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#readBodyPredicateFactory matched
+2023-02-17 14:56:15.528 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#remoteAddrRoutePredicateFactory matched
+2023-02-17 14:56:15.528 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#xForwardedRemoteAddrRoutePredicateFactory matched
+2023-02-17 14:56:15.528 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#weightRoutePredicateFactory matched
+2023-02-17 14:56:15.528 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.c.OnEnabledPredicate           : Condition OnEnabledPredicate on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#cloudFoundryRouteServiceRoutePredicateFactory matched
+2023-02-17 14:56:15.529 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#addRequestHeaderGatewayFilterFactory matched
+2023-02-17 14:56:15.529 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#mapRequestHeaderGatewayFilterFactory matched
+2023-02-17 14:56:15.529 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#addRequestParameterGatewayFilterFactory matched
+2023-02-17 14:56:15.529 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#addResponseHeaderGatewayFilterFactory matched
+2023-02-17 14:56:15.530 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#modifyRequestBodyGatewayFilterFactory matched
+2023-02-17 14:56:15.530 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#dedupeResponseHeaderGatewayFilterFactory matched
+2023-02-17 14:56:15.530 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#modifyResponseBodyGatewayFilterFactory matched
+2023-02-17 14:56:15.530 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#cacheRequestBodyGatewayFilterFactory matched
+2023-02-17 14:56:15.530 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#prefixPathGatewayFilterFactory matched
+2023-02-17 14:56:15.530 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#preserveHostHeaderGatewayFilterFactory matched
+2023-02-17 14:56:15.530 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#redirectToGatewayFilterFactory matched
+2023-02-17 14:56:15.531 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#removeRequestHeaderGatewayFilterFactory matched
+2023-02-17 14:56:15.531 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#removeRequestParameterGatewayFilterFactory matched
+2023-02-17 14:56:15.537 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#removeResponseHeaderGatewayFilterFactory matched
+2023-02-17 14:56:15.552 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#rewritePathGatewayFilterFactory matched
+2023-02-17 14:56:15.552 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#retryGatewayFilterFactory matched
+2023-02-17 14:56:15.552 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#setPathGatewayFilterFactory matched
+2023-02-17 14:56:15.553 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#secureHeadersGatewayFilterFactory matched
+2023-02-17 14:56:15.554 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#setRequestHeaderGatewayFilterFactory matched
+2023-02-17 14:56:15.555 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#setRequestHostHeaderGatewayFilterFactory matched
+2023-02-17 14:56:15.555 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#setResponseHeaderGatewayFilterFactory matched
+2023-02-17 14:56:15.555 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#rewriteResponseHeaderGatewayFilterFactory matched
+2023-02-17 14:56:15.555 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#rewriteLocationResponseHeaderGatewayFilterFactory matched
+2023-02-17 14:56:15.555 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#setStatusGatewayFilterFactory matched
+2023-02-17 14:56:15.555 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#saveSessionGatewayFilterFactory matched
+2023-02-17 14:56:15.555 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#stripPrefixGatewayFilterFactory matched
+2023-02-17 14:56:15.556 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#requestHeaderToRequestUriGatewayFilterFactory matched
+2023-02-17 14:56:15.556 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#requestSizeGatewayFilterFactory matched
+2023-02-17 14:56:15.557 TRACE [gateway,,] 1 --- [           main] o.s.c.g.c.conditional.OnEnabledFilter    : Condition OnEnabledFilter on org.springframework.cloud.gateway.config.GatewayAutoConfiguration#requestHeaderSizeGatewayFilterFactory matched
+2023-02-17 14:56:16.958  INFO [gateway,,] 1 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-02-17 14:56:16.983  INFO [gateway,,] 1 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-02-17 14:56:17.299  INFO [gateway,,] 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=2b4a7e90-181b-35f6-a0f2-79bfeabcf25d
+2023-02-17 14:56:18.165  INFO [gateway,,] 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-17 14:56:18.244  INFO [gateway,,] 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-17 14:56:22.453 DEBUG [gateway,,] 1 --- [           main] o.s.c.gateway.config.GatewayProperties   : Routes supplied from Gateway Properties: [RouteDefinition{id='product-composite', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/product-composite/**}}], filters=[], uri=http://product-composite, order=0, metadata={}}, RouteDefinition{id='oauth2-server', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/oauth2/**}}], filters=[], uri=http://auth-server, order=0, metadata={}}, RouteDefinition{id='oauth2-login', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/login/**}}], filters=[], uri=http://auth-server, order=0, metadata={}}, RouteDefinition{id='oauth2-error', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/error/**}}], filters=[], uri=http://auth-server, order=0, metadata={}}, RouteDefinition{id='product-composite-swagger-ui', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/openapi/**}}], filters=[], uri=http://product-composite, order=0, metadata={}}, RouteDefinition{id='product-composite-swagger-ui-webjars', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/webjars/**}}], filters=[], uri=http://product-composite, order=0, metadata={}}, RouteDefinition{id='config-server', predicates=[PredicateDefinition{name='Path', args={_genkey_0=/config/**}}], filters=[FilterDefinition{name='RewritePath', args={_genkey_0=/config/(?<segment>.*), _genkey_1=/$\{segment}}}], uri=http://config-server:8888, order=0, metadata={}}]
+2023-02-17 14:56:23.605  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+2023-02-17 14:56:23.606  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+2023-02-17 14:56:23.607  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+2023-02-17 14:56:23.607  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+2023-02-17 14:56:23.607  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+2023-02-17 14:56:23.607  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+2023-02-17 14:56:23.607  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+2023-02-17 14:56:23.607  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+2023-02-17 14:56:23.607  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+2023-02-17 14:56:23.607  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+2023-02-17 14:56:23.607  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+2023-02-17 14:56:23.607  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+2023-02-17 14:56:23.607  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+2023-02-17 14:56:23.607  INFO [gateway,,] 1 --- [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+2023-02-17 14:56:25.821  INFO [gateway,,] 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 21 endpoint(s) beneath base path '/actuator'
+2023-02-17 14:56:26.149 DEBUG [gateway,,] 1 --- [           main] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-17 14:56:26.423  INFO [gateway,,] 1 --- [           main] c.f.c.c.BeanFactoryAwareFunctionRegistry : Can't determine default function definition. Please use 'spring.cloud.function.definition' property to explicitly define it.
+2023-02-17 14:56:27.938  INFO [gateway,,] 1 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-02-17 14:56:27.939  INFO [gateway,,] 1 --- [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'gateway.errorChannel' has 1 subscriber(s).
+2023-02-17 14:56:27.939  INFO [gateway,,] 1 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2023-02-17 14:56:28.177  INFO [gateway,,] 1 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8443
+2023-02-17 14:56:28.302 DEBUG [gateway,,] 1 --- [           main] o.s.c.g.filter.GatewayMetricsFilter      : New routes count: 7
+2023-02-17 14:56:28.339  INFO [gateway,,] 1 --- [           main] s.m.s.gateway.GatewayApplication         : Started GatewayApplication in 27.954 seconds (JVM running for 28.312)
+2023-02-17 14:56:29.878 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d5496146-1] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:56:29.878 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [23d939bc-2] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:56:29.957 TRACE [gateway,27406409661e078f,27406409661e078f] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:56:30.091 TRACE [gateway,39fce0336d4667a3,39fce0336d4667a3] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:56:30.092  INFO [gateway,27406409661e078f,27406409661e078f] 1 --- [oundedElastic-1] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2023-02-17 14:56:30.113  INFO [gateway,27406409661e078f,27406409661e078f] 1 --- [oundedElastic-1] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#5e9cb95:0/SimpleConnection@5b0c4d65 [delegate=amqp://guest@10.96.137.188:5672/, localPort= 37584]
+2023-02-17 14:56:39.569 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [6096c6a5-4] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:56:39.569 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [953004b9-3] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:56:39.572 TRACE [gateway,2be9d529af30bbb4,2be9d529af30bbb4] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:56:39.578 TRACE [gateway,c8579b70af35a3dc,c8579b70af35a3dc] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:56:39.587 TRACE [gateway,2be9d529af30bbb4,2be9d529af30bbb4] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [953004b9-3] Completed 200 OK, headers={masked}
+2023-02-17 14:56:39.593 TRACE [gateway,c8579b70af35a3dc,c8579b70af35a3dc] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [6096c6a5-4] Completed 200 OK, headers={masked}
+2023-02-17 14:56:49.557 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e8820d78-5] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:56:49.560 TRACE [gateway,719255b5109c27cc,719255b5109c27cc] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:56:49.564 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [de58bfed-6] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:56:49.565 TRACE [gateway,f872acf9deb12e1d,f872acf9deb12e1d] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:56:49.567 TRACE [gateway,719255b5109c27cc,719255b5109c27cc] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e8820d78-5] Completed 200 OK, headers={masked}
+2023-02-17 14:56:49.568 TRACE [gateway,f872acf9deb12e1d,f872acf9deb12e1d] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [de58bfed-6] Completed 200 OK, headers={masked}
+2023-02-17 14:56:59.545 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b97207e8-8] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:56:59.546 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [90348bca-7] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:56:59.547 TRACE [gateway,0e52892730d99084,0e52892730d99084] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:56:59.549 TRACE [gateway,e95a70333f7e59cb,e95a70333f7e59cb] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:56:59.550 TRACE [gateway,0e52892730d99084,0e52892730d99084] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [90348bca-7] Completed 200 OK, headers={masked}
+2023-02-17 14:56:59.552 TRACE [gateway,e95a70333f7e59cb,e95a70333f7e59cb] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b97207e8-8] Completed 200 OK, headers={masked}
+2023-02-17 14:57:09.568 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a182c356-9] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:57:09.569 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [cdbf1212-10] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:57:09.571 TRACE [gateway,e4468f23a51a1203,e4468f23a51a1203] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:57:09.576 TRACE [gateway,105776c5adc599b5,105776c5adc599b5] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:57:09.579 TRACE [gateway,e4468f23a51a1203,e4468f23a51a1203] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [cdbf1212-10] Completed 200 OK, headers={masked}
+2023-02-17 14:57:09.581 TRACE [gateway,105776c5adc599b5,105776c5adc599b5] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a182c356-9] Completed 200 OK, headers={masked}
+2023-02-17 14:57:19.545 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [452cd5f6-11] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:57:19.545 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [81d4ceb5-12] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:57:19.546 TRACE [gateway,e91a179f846f9d8d,e91a179f846f9d8d] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:57:19.548 TRACE [gateway,ced3708f0185185d,ced3708f0185185d] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:57:19.550 TRACE [gateway,e91a179f846f9d8d,e91a179f846f9d8d] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [81d4ceb5-12] Completed 200 OK, headers={masked}
+2023-02-17 14:57:19.551 TRACE [gateway,ced3708f0185185d,ced3708f0185185d] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [452cd5f6-11] Completed 200 OK, headers={masked}
+2023-02-17 14:57:29.544 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9e468a54-13] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:57:29.544 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [99024e56-14] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:57:29.545 TRACE [gateway,7e72136e9903db07,7e72136e9903db07] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:57:29.547 TRACE [gateway,c115aaa71e606d2e,c115aaa71e606d2e] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:57:29.549 TRACE [gateway,c115aaa71e606d2e,c115aaa71e606d2e] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [99024e56-14] Completed 200 OK, headers={masked}
+2023-02-17 14:57:29.549 TRACE [gateway,7e72136e9903db07,7e72136e9903db07] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9e468a54-13] Completed 200 OK, headers={masked}
+2023-02-17 14:57:39.539 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [621275df-15] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:57:39.540 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [8aabf93f-16] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:57:39.541 TRACE [gateway,3db68905b244a7e7,3db68905b244a7e7] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:57:39.543 TRACE [gateway,4eed26681dd19ea0,4eed26681dd19ea0] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:57:39.546 TRACE [gateway,3db68905b244a7e7,3db68905b244a7e7] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [621275df-15] Completed 200 OK, headers={masked}
+2023-02-17 14:57:39.549 TRACE [gateway,4eed26681dd19ea0,4eed26681dd19ea0] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [8aabf93f-16] Completed 200 OK, headers={masked}
+2023-02-17 14:57:49.538 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [703be47e-17] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:57:49.538 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [5ccf1936-18] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:57:49.539 TRACE [gateway,7b31ffacecfcb270,7b31ffacecfcb270] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:57:49.541 TRACE [gateway,83111a611e551750,83111a611e551750] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:57:49.543 TRACE [gateway,7b31ffacecfcb270,7b31ffacecfcb270] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [703be47e-17] Completed 200 OK, headers={masked}
+2023-02-17 14:57:49.544 TRACE [gateway,83111a611e551750,83111a611e551750] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [5ccf1936-18] Completed 200 OK, headers={masked}
+2023-02-17 14:57:59.539 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a7ed29c6-19] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:57:59.541 TRACE [gateway,b6fdefb35798d988,b6fdefb35798d988] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:57:59.544 TRACE [gateway,b6fdefb35798d988,b6fdefb35798d988] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a7ed29c6-19] Completed 200 OK, headers={masked}
+2023-02-17 14:57:59.553 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9cd3dca3-20] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:57:59.555 TRACE [gateway,ad3a6de8c5fc3f79,ad3a6de8c5fc3f79] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:57:59.557 TRACE [gateway,ad3a6de8c5fc3f79,ad3a6de8c5fc3f79] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9cd3dca3-20] Completed 200 OK, headers={masked}
+2023-02-17 14:58:09.542 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9924c4fc-22] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:58:09.542 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9b28d673-21] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:58:09.545 TRACE [gateway,880bde4285b84590,880bde4285b84590] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:58:09.548 TRACE [gateway,410b24088a209cc8,410b24088a209cc8] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:58:09.550 TRACE [gateway,880bde4285b84590,880bde4285b84590] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9924c4fc-22] Completed 200 OK, headers={masked}
+2023-02-17 14:58:09.551 TRACE [gateway,410b24088a209cc8,410b24088a209cc8] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9b28d673-21] Completed 200 OK, headers={masked}
+2023-02-17 14:58:19.541 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [53e9dcb3-23] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:58:19.542 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [3122c478-24] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:58:19.543 TRACE [gateway,ad0cb0a4853f1ed2,ad0cb0a4853f1ed2] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:58:19.547 TRACE [gateway,ff013e4502ac549b,ff013e4502ac549b] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:58:19.547 TRACE [gateway,ad0cb0a4853f1ed2,ad0cb0a4853f1ed2] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [53e9dcb3-23] Completed 200 OK, headers={masked}
+2023-02-17 14:58:19.549 TRACE [gateway,ff013e4502ac549b,ff013e4502ac549b] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [3122c478-24] Completed 200 OK, headers={masked}
+2023-02-17 14:58:29.536 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e564b3dd-26] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:58:29.536 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [65f42937-25] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:58:29.538 TRACE [gateway,ff1d1a37fdc906cb,ff1d1a37fdc906cb] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:58:29.539 TRACE [gateway,8d3ffbdd1405118d,8d3ffbdd1405118d] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:58:29.541 TRACE [gateway,ff1d1a37fdc906cb,ff1d1a37fdc906cb] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e564b3dd-26] Completed 200 OK, headers={masked}
+2023-02-17 14:58:29.542 TRACE [gateway,8d3ffbdd1405118d,8d3ffbdd1405118d] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [65f42937-25] Completed 200 OK, headers={masked}
+2023-02-17 14:58:39.535 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [5a36438b-27] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:58:39.535 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [61862dc6-28] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:58:39.536 TRACE [gateway,e484e38ce5bc9d04,e484e38ce5bc9d04] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:58:39.538 TRACE [gateway,7cad56ff17d67b08,7cad56ff17d67b08] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:58:39.539 TRACE [gateway,e484e38ce5bc9d04,e484e38ce5bc9d04] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [5a36438b-27] Completed 200 OK, headers={masked}
+2023-02-17 14:58:39.540 TRACE [gateway,7cad56ff17d67b08,7cad56ff17d67b08] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [61862dc6-28] Completed 200 OK, headers={masked}
+2023-02-17 14:58:49.536 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [20cace1b-30] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:58:49.537 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d06fd3df-29] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:58:49.537 TRACE [gateway,e19b4791531ada76,e19b4791531ada76] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:58:49.539 TRACE [gateway,876d956a5792d54f,876d956a5792d54f] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:58:49.540 TRACE [gateway,e19b4791531ada76,e19b4791531ada76] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [20cace1b-30] Completed 200 OK, headers={masked}
+2023-02-17 14:58:49.541 TRACE [gateway,876d956a5792d54f,876d956a5792d54f] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d06fd3df-29] Completed 200 OK, headers={masked}
+2023-02-17 14:58:59.535 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e9d99c8d-31] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:58:59.535 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d40b32c9-32] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:58:59.536 TRACE [gateway,6d70574c54800f27,6d70574c54800f27] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:58:59.538 TRACE [gateway,1dcecdc9ea7e48db,1dcecdc9ea7e48db] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:58:59.540 TRACE [gateway,6d70574c54800f27,6d70574c54800f27] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d40b32c9-32] Completed 200 OK, headers={masked}
+2023-02-17 14:58:59.541 TRACE [gateway,1dcecdc9ea7e48db,1dcecdc9ea7e48db] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e9d99c8d-31] Completed 200 OK, headers={masked}
+2023-02-17 14:59:09.562 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c943ec3c-33] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:59:09.560 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [46445504-34] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:59:09.566 TRACE [gateway,9edc8d5c3c5657b8,9edc8d5c3c5657b8] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:59:09.575 TRACE [gateway,9edc8d5c3c5657b8,9edc8d5c3c5657b8] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c943ec3c-33] Completed 200 OK, headers={masked}
+2023-02-17 14:59:09.576 TRACE [gateway,f82d7788e9c9fb72,f82d7788e9c9fb72] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:59:09.580 TRACE [gateway,f82d7788e9c9fb72,f82d7788e9c9fb72] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [46445504-34] Completed 200 OK, headers={masked}
+2023-02-17 14:59:19.541 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [46996b2f-35] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:59:19.541 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d3761c5a-36] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:59:19.543 TRACE [gateway,90211ea60cfdbc8d,90211ea60cfdbc8d] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:59:19.547 TRACE [gateway,c94e0133ef5eae06,c94e0133ef5eae06] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:59:19.549 TRACE [gateway,c94e0133ef5eae06,c94e0133ef5eae06] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [46996b2f-35] Completed 200 OK, headers={masked}
+2023-02-17 14:59:19.550 TRACE [gateway,90211ea60cfdbc8d,90211ea60cfdbc8d] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d3761c5a-36] Completed 200 OK, headers={masked}
+2023-02-17 14:59:29.538 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [77920742-37] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:59:29.540 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [36650453-38] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:59:29.540 TRACE [gateway,ade8e70ed6d4f056,ade8e70ed6d4f056] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:59:29.542 TRACE [gateway,abd2bf6f46b53072,abd2bf6f46b53072] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:59:29.543 TRACE [gateway,ade8e70ed6d4f056,ade8e70ed6d4f056] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [77920742-37] Completed 200 OK, headers={masked}
+2023-02-17 14:59:29.544 TRACE [gateway,abd2bf6f46b53072,abd2bf6f46b53072] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [36650453-38] Completed 200 OK, headers={masked}
+2023-02-17 14:59:39.538 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c3641a15-39] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:59:39.538 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4e1d8f48-40] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:59:39.539 TRACE [gateway,10f6185be3009dfc,10f6185be3009dfc] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:59:39.542 TRACE [gateway,c3291cf437548951,c3291cf437548951] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:59:39.544 TRACE [gateway,10f6185be3009dfc,10f6185be3009dfc] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c3641a15-39] Completed 200 OK, headers={masked}
+2023-02-17 14:59:39.544 TRACE [gateway,c3291cf437548951,c3291cf437548951] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4e1d8f48-40] Completed 200 OK, headers={masked}
+2023-02-17 14:59:49.535 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [02c955cd-42] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:59:49.535 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [67f86fba-41] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:59:49.537 TRACE [gateway,e1db6d8d338824f3,e1db6d8d338824f3] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:59:49.538 TRACE [gateway,3c6a7e62839b5737,3c6a7e62839b5737] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:59:49.540 TRACE [gateway,e1db6d8d338824f3,e1db6d8d338824f3] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [67f86fba-41] Completed 200 OK, headers={masked}
+2023-02-17 14:59:49.541 TRACE [gateway,3c6a7e62839b5737,3c6a7e62839b5737] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [02c955cd-42] Completed 200 OK, headers={masked}
+2023-02-17 14:59:59.534 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [6d647199-43] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:59:59.534 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e5a6a9e7-44] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:59:59.535 TRACE [gateway,5477176e6e623d98,5477176e6e623d98] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:59:59.536 TRACE [gateway,ff1237877209245f,ff1237877209245f] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 14:59:59.538 TRACE [gateway,5477176e6e623d98,5477176e6e623d98] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e5a6a9e7-44] Completed 200 OK, headers={masked}
+2023-02-17 14:59:59.538 TRACE [gateway,ff1237877209245f,ff1237877209245f] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [6d647199-43] Completed 200 OK, headers={masked}
+2023-02-17 15:00:09.534 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4d0cccf8-46] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:00:09.534 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [6127cbc0-45] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:00:09.535 TRACE [gateway,163f5434b1d4ae80,163f5434b1d4ae80] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:00:09.537 TRACE [gateway,0f7928aee375e907,0f7928aee375e907] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:00:09.538 TRACE [gateway,163f5434b1d4ae80,163f5434b1d4ae80] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4d0cccf8-46] Completed 200 OK, headers={masked}
+2023-02-17 15:00:09.541 TRACE [gateway,0f7928aee375e907,0f7928aee375e907] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [6127cbc0-45] Completed 200 OK, headers={masked}
+2023-02-17 15:00:19.537 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0965a6f7-47] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:00:19.538 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [bb2246ec-48] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:00:19.539 TRACE [gateway,816cb140fd1525e1,816cb140fd1525e1] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:00:19.541 TRACE [gateway,06b164dee4781bfc,06b164dee4781bfc] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:00:19.543 TRACE [gateway,816cb140fd1525e1,816cb140fd1525e1] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0965a6f7-47] Completed 200 OK, headers={masked}
+2023-02-17 15:00:19.544 TRACE [gateway,06b164dee4781bfc,06b164dee4781bfc] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [bb2246ec-48] Completed 200 OK, headers={masked}
+2023-02-17 15:00:29.538 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [69a7de0a-49] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:00:29.538 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0da5c8d4-50] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:00:29.541 TRACE [gateway,2fed5f03ae967934,2fed5f03ae967934] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:00:29.544 TRACE [gateway,c13cd57255f980f7,c13cd57255f980f7] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:00:29.547 TRACE [gateway,c13cd57255f980f7,c13cd57255f980f7] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0da5c8d4-50] Completed 200 OK, headers={masked}
+2023-02-17 15:00:29.547 TRACE [gateway,2fed5f03ae967934,2fed5f03ae967934] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [69a7de0a-49] Completed 200 OK, headers={masked}
+2023-02-17 15:00:39.534 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [8371fd72-52] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:00:39.534 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [f0b2680b-51] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:00:39.536 TRACE [gateway,ca067f038e0494de,ca067f038e0494de] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:00:39.538 TRACE [gateway,5e494aa4e2b46409,5e494aa4e2b46409] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:00:39.539 TRACE [gateway,ca067f038e0494de,ca067f038e0494de] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [8371fd72-52] Completed 200 OK, headers={masked}
+2023-02-17 15:00:39.540 TRACE [gateway,5e494aa4e2b46409,5e494aa4e2b46409] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [f0b2680b-51] Completed 200 OK, headers={masked}
+2023-02-17 15:00:49.533 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [1f050f8f-54] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:00:49.533 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [53861343-53] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:00:49.534 TRACE [gateway,82fde8571d70d5a6,82fde8571d70d5a6] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:00:49.535 TRACE [gateway,b0ddd895fdc93c03,b0ddd895fdc93c03] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:00:49.537 TRACE [gateway,82fde8571d70d5a6,82fde8571d70d5a6] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [1f050f8f-54] Completed 200 OK, headers={masked}
+2023-02-17 15:00:49.538 TRACE [gateway,b0ddd895fdc93c03,b0ddd895fdc93c03] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [53861343-53] Completed 200 OK, headers={masked}
+2023-02-17 15:00:59.535 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [ba942aaa-55] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:00:59.536 TRACE [gateway,a1a00bba3439b0f7,a1a00bba3439b0f7] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:00:59.537 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4c4224e2-56] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:00:59.538 TRACE [gateway,77d34fbc00d35441,77d34fbc00d35441] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:00:59.539 TRACE [gateway,a1a00bba3439b0f7,a1a00bba3439b0f7] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [ba942aaa-55] Completed 200 OK, headers={masked}
+2023-02-17 15:00:59.540 TRACE [gateway,77d34fbc00d35441,77d34fbc00d35441] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4c4224e2-56] Completed 200 OK, headers={masked}
+2023-02-17 15:01:09.533 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d2409041-57] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:01:09.535 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9b76e437-58] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:01:09.535 TRACE [gateway,0779debccdb011ca,0779debccdb011ca] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:01:09.537 TRACE [gateway,b834cc6cc70964e5,b834cc6cc70964e5] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:01:09.540 TRACE [gateway,b834cc6cc70964e5,b834cc6cc70964e5] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d2409041-57] Completed 200 OK, headers={masked}
+2023-02-17 15:01:09.542 TRACE [gateway,0779debccdb011ca,0779debccdb011ca] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9b76e437-58] Completed 200 OK, headers={masked}
+2023-02-17 15:01:19.533 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4f989eab-60] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:01:19.533 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [56b0aab5-59] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:01:19.534 TRACE [gateway,95de5a1072ab4be3,95de5a1072ab4be3] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:01:19.536 TRACE [gateway,0b9c2b02891c8261,0b9c2b02891c8261] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:01:19.537 TRACE [gateway,95de5a1072ab4be3,95de5a1072ab4be3] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4f989eab-60] Completed 200 OK, headers={masked}
+2023-02-17 15:01:19.537 TRACE [gateway,0b9c2b02891c8261,0b9c2b02891c8261] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [56b0aab5-59] Completed 200 OK, headers={masked}
+2023-02-17 15:01:29.532 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c8000fd2-62] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:01:29.532 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [3263b4f6-61] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:01:29.534 TRACE [gateway,3b58399e8452df9b,3b58399e8452df9b] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:01:29.535 TRACE [gateway,24abe02eb694073f,24abe02eb694073f] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:01:29.535 TRACE [gateway,3b58399e8452df9b,3b58399e8452df9b] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c8000fd2-62] Completed 200 OK, headers={masked}
+2023-02-17 15:01:29.536 TRACE [gateway,24abe02eb694073f,24abe02eb694073f] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [3263b4f6-61] Completed 200 OK, headers={masked}
+2023-02-17 15:01:39.534 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [141392f7-63] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:01:39.535 TRACE [gateway,e7507152ec0e34f0,e7507152ec0e34f0] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:01:39.537 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [64620d06-64] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:01:39.537 TRACE [gateway,6bf4bd4573a4764a,6bf4bd4573a4764a] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:01:39.537 TRACE [gateway,e7507152ec0e34f0,e7507152ec0e34f0] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [141392f7-63] Completed 200 OK, headers={masked}
+2023-02-17 15:01:39.539 TRACE [gateway,6bf4bd4573a4764a,6bf4bd4573a4764a] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [64620d06-64] Completed 200 OK, headers={masked}
+2023-02-17 15:01:49.548 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [caf1360d-65] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:01:49.550 TRACE [gateway,b6b33bbb04574711,b6b33bbb04574711] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:01:49.551 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a4947a65-66] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:01:49.555 TRACE [gateway,b6b33bbb04574711,b6b33bbb04574711] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [caf1360d-65] Completed 200 OK, headers={masked}
+2023-02-17 15:01:49.555 TRACE [gateway,811297acebbddb10,811297acebbddb10] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:01:49.558 TRACE [gateway,811297acebbddb10,811297acebbddb10] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a4947a65-66] Completed 200 OK, headers={masked}
+2023-02-17 15:01:59.531 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [95987515-67] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:01:59.532 TRACE [gateway,b9e84b3303db6d4e,b9e84b3303db6d4e] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:01:59.533 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [530d4ef4-68] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:01:59.534 TRACE [gateway,0e0255ad187c3796,0e0255ad187c3796] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:01:59.535 TRACE [gateway,b9e84b3303db6d4e,b9e84b3303db6d4e] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [95987515-67] Completed 200 OK, headers={masked}
+2023-02-17 15:01:59.535 TRACE [gateway,0e0255ad187c3796,0e0255ad187c3796] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [530d4ef4-68] Completed 200 OK, headers={masked}
+2023-02-17 15:02:09.539 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b78f5c2f-69] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:02:09.540 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [dd7a8b54-70] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:02:09.542 TRACE [gateway,e62d04060fdfb917,e62d04060fdfb917] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:02:09.548 TRACE [gateway,01cb98f1f99c7fa4,01cb98f1f99c7fa4] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:02:09.550 TRACE [gateway,e62d04060fdfb917,e62d04060fdfb917] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [dd7a8b54-70] Completed 200 OK, headers={masked}
+2023-02-17 15:02:09.552 TRACE [gateway,01cb98f1f99c7fa4,01cb98f1f99c7fa4] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b78f5c2f-69] Completed 200 OK, headers={masked}
+2023-02-17 15:02:19.548 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d74f7d07-71] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:02:19.550 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [865dbe00-72] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:02:19.550 TRACE [gateway,af318d37c26a9c46,af318d37c26a9c46] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:02:19.552 TRACE [gateway,e77a8c16decd6daf,e77a8c16decd6daf] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:02:19.553 TRACE [gateway,af318d37c26a9c46,af318d37c26a9c46] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d74f7d07-71] Completed 200 OK, headers={masked}
+2023-02-17 15:02:19.555 TRACE [gateway,e77a8c16decd6daf,e77a8c16decd6daf] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [865dbe00-72] Completed 200 OK, headers={masked}
+2023-02-17 15:02:29.534 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [35b2e313-73] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:02:29.535 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d584a031-74] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:02:29.535 TRACE [gateway,a01e38877317d818,a01e38877317d818] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:02:29.537 TRACE [gateway,88974cb126932a20,88974cb126932a20] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:02:29.541 TRACE [gateway,a01e38877317d818,a01e38877317d818] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [35b2e313-73] Completed 200 OK, headers={masked}
+2023-02-17 15:02:29.542 TRACE [gateway,88974cb126932a20,88974cb126932a20] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d584a031-74] Completed 200 OK, headers={masked}
+2023-02-17 15:02:39.539 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a02ea05e-75] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:02:39.541 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [79fe2583-76] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:02:39.542 TRACE [gateway,bcc77cd8a105ebce,bcc77cd8a105ebce] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:02:39.544 TRACE [gateway,b616732ed5dbe6e9,b616732ed5dbe6e9] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:02:39.546 TRACE [gateway,bcc77cd8a105ebce,bcc77cd8a105ebce] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a02ea05e-75] Completed 200 OK, headers={masked}
+2023-02-17 15:02:39.547 TRACE [gateway,b616732ed5dbe6e9,b616732ed5dbe6e9] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [79fe2583-76] Completed 200 OK, headers={masked}
+2023-02-17 15:02:49.531 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [30b593cd-77] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:02:49.532 TRACE [gateway,56bd2f48d83371b1,56bd2f48d83371b1] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:02:49.532 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e5be6423-78] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:02:49.533 TRACE [gateway,57091a8785ff465b,57091a8785ff465b] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:02:49.534 TRACE [gateway,56bd2f48d83371b1,56bd2f48d83371b1] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [30b593cd-77] Completed 200 OK, headers={masked}
+2023-02-17 15:02:49.535 TRACE [gateway,57091a8785ff465b,57091a8785ff465b] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e5be6423-78] Completed 200 OK, headers={masked}
+2023-02-17 15:02:59.531 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b166334f-80] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:02:59.531 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [146b0126-79] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:02:59.532 TRACE [gateway,0c8aa44392348421,0c8aa44392348421] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:02:59.534 TRACE [gateway,66c268a7761ef97f,66c268a7761ef97f] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:02:59.535 TRACE [gateway,0c8aa44392348421,0c8aa44392348421] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b166334f-80] Completed 200 OK, headers={masked}
+2023-02-17 15:02:59.536 TRACE [gateway,66c268a7761ef97f,66c268a7761ef97f] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [146b0126-79] Completed 200 OK, headers={masked}
+2023-02-17 15:03:09.534 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c6f16803-82] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:03:09.534 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [719122bc-81] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:03:09.535 TRACE [gateway,668682149855ed29,668682149855ed29] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:03:09.537 TRACE [gateway,e152187cdb7203a1,e152187cdb7203a1] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:03:09.539 TRACE [gateway,668682149855ed29,668682149855ed29] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c6f16803-82] Completed 200 OK, headers={masked}
+2023-02-17 15:03:09.540 TRACE [gateway,e152187cdb7203a1,e152187cdb7203a1] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [719122bc-81] Completed 200 OK, headers={masked}
+2023-02-17 15:03:19.538 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [7212da15-83] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:03:19.540 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [1e181673-84] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:03:19.540 TRACE [gateway,c8a7f077c287feac,c8a7f077c287feac] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:03:19.542 TRACE [gateway,027208d16c75e435,027208d16c75e435] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:03:19.545 TRACE [gateway,c8a7f077c287feac,c8a7f077c287feac] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [7212da15-83] Completed 200 OK, headers={masked}
+2023-02-17 15:03:19.546 TRACE [gateway,027208d16c75e435,027208d16c75e435] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [1e181673-84] Completed 200 OK, headers={masked}
+2023-02-17 15:03:29.530 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e5383fac-86] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:03:29.530 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [ddaea95e-85] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:03:29.532 TRACE [gateway,3487dc80045fc84d,3487dc80045fc84d] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:03:29.533 TRACE [gateway,93b758bc3488cbe3,93b758bc3488cbe3] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:03:29.534 TRACE [gateway,3487dc80045fc84d,3487dc80045fc84d] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e5383fac-86] Completed 200 OK, headers={masked}
+2023-02-17 15:03:29.536 TRACE [gateway,93b758bc3488cbe3,93b758bc3488cbe3] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [ddaea95e-85] Completed 200 OK, headers={masked}
+2023-02-17 15:03:39.533 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [1a21cadc-87] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:03:39.533 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [25e3cdb8-88] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:03:39.535 TRACE [gateway,4ddb1d5f7293d6b8,4ddb1d5f7293d6b8] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:03:39.538 TRACE [gateway,87a2d98828b443e8,87a2d98828b443e8] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:03:39.539 TRACE [gateway,4ddb1d5f7293d6b8,4ddb1d5f7293d6b8] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [25e3cdb8-88] Completed 200 OK, headers={masked}
+2023-02-17 15:03:39.540 TRACE [gateway,87a2d98828b443e8,87a2d98828b443e8] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [1a21cadc-87] Completed 200 OK, headers={masked}
+2023-02-17 15:03:49.532 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [6edc153f-90] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:03:49.532 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c3228653-89] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:03:49.534 TRACE [gateway,7ec97476584cd4ce,7ec97476584cd4ce] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:03:49.536 TRACE [gateway,a16062b63695b839,a16062b63695b839] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:03:49.537 TRACE [gateway,7ec97476584cd4ce,7ec97476584cd4ce] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [6edc153f-90] Completed 200 OK, headers={masked}
+2023-02-17 15:03:49.539 TRACE [gateway,a16062b63695b839,a16062b63695b839] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c3228653-89] Completed 200 OK, headers={masked}
+2023-02-17 15:03:59.532 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [411abadc-92] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:03:59.532 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [48fd43c4-91] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:03:59.533 TRACE [gateway,07e81e430be2552e,07e81e430be2552e] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:03:59.536 TRACE [gateway,6b08ba9bbb020bc9,6b08ba9bbb020bc9] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:03:59.538 TRACE [gateway,07e81e430be2552e,07e81e430be2552e] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [411abadc-92] Completed 200 OK, headers={masked}
+2023-02-17 15:03:59.538 TRACE [gateway,6b08ba9bbb020bc9,6b08ba9bbb020bc9] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [48fd43c4-91] Completed 200 OK, headers={masked}
+2023-02-17 15:04:09.538 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d81c4160-93] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:04:09.538 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d5bc5210-94] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:04:09.540 TRACE [gateway,154a7d494563c8ef,154a7d494563c8ef] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:04:09.542 TRACE [gateway,909e714b896d573c,909e714b896d573c] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:04:09.543 TRACE [gateway,154a7d494563c8ef,154a7d494563c8ef] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d5bc5210-94] Completed 200 OK, headers={masked}
+2023-02-17 15:04:09.544 TRACE [gateway,909e714b896d573c,909e714b896d573c] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d81c4160-93] Completed 200 OK, headers={masked}
+2023-02-17 15:04:19.534 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a001b63b-96] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:04:19.534 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [2d300bb9-95] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:04:19.535 TRACE [gateway,8cd66226826ed284,8cd66226826ed284] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:04:19.538 TRACE [gateway,31d4f52000769b7a,31d4f52000769b7a] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:04:19.540 TRACE [gateway,8cd66226826ed284,8cd66226826ed284] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a001b63b-96] Completed 200 OK, headers={masked}
+2023-02-17 15:04:19.541 TRACE [gateway,31d4f52000769b7a,31d4f52000769b7a] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [2d300bb9-95] Completed 200 OK, headers={masked}
+2023-02-17 15:04:29.532 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [f0dfd0e7-97] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:04:29.534 TRACE [gateway,7fd5d4ae211f5965,7fd5d4ae211f5965] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:04:29.540 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b1877f2c-98] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:04:29.541 TRACE [gateway,d12f0ec2711737d7,d12f0ec2711737d7] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:04:29.542 TRACE [gateway,7fd5d4ae211f5965,7fd5d4ae211f5965] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [f0dfd0e7-97] Completed 200 OK, headers={masked}
+2023-02-17 15:04:29.544 TRACE [gateway,d12f0ec2711737d7,d12f0ec2711737d7] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b1877f2c-98] Completed 200 OK, headers={masked}
+2023-02-17 15:04:39.537 TRACE [gateway,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [67b110a1-99] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:04:39.539 TRACE [gateway,0bf076b0b90e26ec,0bf076b0b90e26ec] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:04:39.542 TRACE [gateway,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0d790afe-100] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:04:39.543 TRACE [gateway,d6137fa5741b992f,d6137fa5741b992f] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:04:39.546 TRACE [gateway,0bf076b0b90e26ec,0bf076b0b90e26ec] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [67b110a1-99] Completed 200 OK, headers={masked}
+2023-02-17 15:04:39.546 TRACE [gateway,d6137fa5741b992f,d6137fa5741b992f] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0d790afe-100] Completed 200 OK, headers={masked}
+2023-02-17 15:04:49.534 TRACE [gateway,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [53762410-102] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:04:49.534 TRACE [gateway,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [45286331-101] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:04:49.538 TRACE [gateway,8e69c109a1606a4a,8e69c109a1606a4a] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:04:49.542 TRACE [gateway,9db1ce41e9aa49f7,9db1ce41e9aa49f7] 1 --- [     parallel-1] o.s.c.g.f.WeightCalculatorWebFilter      : Weights attr: {}
+2023-02-17 15:04:49.545 TRACE [gateway,9db1ce41e9aa49f7,9db1ce41e9aa49f7] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [45286331-101] Completed 200 OK, headers={masked}
+2023-02-17 15:04:49.546 TRACE [gateway,8e69c109a1606a4a,8e69c109a1606a4a] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [53762410-102] Completed 200 OK, headers={masked}

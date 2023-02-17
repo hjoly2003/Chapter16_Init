@@ -1,0 +1,131 @@
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::                (v2.7.3)
+
+2023-02-17 14:56:12.563  INFO [product-composite,,] 1 --- [           main] m.c.p.ProductCompositeServiceApplication : Starting ProductCompositeServiceApplication using Java 17.0.4 on product-composite-5bccc45877-8s4qw with PID 1 (/application/BOOT-INF/classes started by root in /application)
+2023-02-17 14:56:12.565 DEBUG [product-composite,,] 1 --- [           main] m.c.p.ProductCompositeServiceApplication : Running with Spring Boot v2.7.3, Spring v5.3.22
+2023-02-17 14:56:12.566  INFO [product-composite,,] 1 --- [           main] m.c.p.ProductCompositeServiceApplication : The following 1 profile is active: "docker"
+2023-02-17 14:56:12.658  INFO [product-composite,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888
+2023-02-17 14:56:12.660  INFO [product-composite,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://config-server:8888. Will be trying the next url if available
+2023-02-17 14:56:12.663  INFO [product-composite,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888
+2023-02-17 14:56:12.663  INFO [product-composite,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Connect Timeout Exception on Url - http://config-server:8888. Will be trying the next url if available
+2023-02-17 14:56:12.663  INFO [product-composite,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-server:8888
+2023-02-17 14:56:12.663  INFO [product-composite,,] 1 --- [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=product-composite, profiles=[docker], label=null, version=null, state=null
+2023-02-17 14:56:14.901  INFO [product-composite,,] 1 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'errorChannel' has been explicitly defined. Therefore, a default PublishSubscribeChannel will be created.
+2023-02-17 14:56:14.912  INFO [product-composite,,] 1 --- [           main] faultConfiguringBeanFactoryPostProcessor : No bean named 'integrationHeaderChannelRegistry' has been explicitly defined. Therefore, a default DefaultHeaderChannelRegistry will be created.
+2023-02-17 14:56:15.363  INFO [product-composite,,] 1 --- [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5c2c2587-fa80-3182-95be-da2a14cf0640
+2023-02-17 14:56:16.280  INFO [product-composite,,] 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.integration.config.IntegrationManagementConfiguration' of type [org.springframework.integration.config.IntegrationManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-17 14:56:16.396  INFO [product-composite,,] 1 --- [           main] trationDelegate$BeanPostProcessorChecker : Bean 'integrationChannelResolver' of type [org.springframework.integration.support.channel.BeanFactoryChannelResolver] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-02-17 14:56:17.581  INFO [product-composite,,] 1 --- [           main] m.c.p.ProductCompositeServiceApplication : Creates a messagingScheduler with connectionPoolSize = 10
+2023-02-17 14:56:26.551  INFO [product-composite,,] 1 --- [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 32 endpoint(s) beneath base path '/actuator'
+2023-02-17 14:56:26.913 DEBUG [product-composite,,] 1 --- [           main] o.s.w.s.adapter.HttpWebHandlerAdapter    : enableLoggingRequestDetails='false': form data and headers will be masked to prevent unsafe logging of potentially sensitive data
+2023-02-17 14:56:28.364  INFO [product-composite,,] 1 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Creating binder: rabbit
+2023-02-17 14:56:28.508  INFO [product-composite,,] 1 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Caching the binder: rabbit
+2023-02-17 14:56:28.512  INFO [product-composite,,] 1 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: rabbit
+2023-02-17 14:56:28.515  INFO [product-composite,,] 1 --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'product-composite.forwardedHeaderTransformer-in-0' has 1 subscriber(s).
+2023-02-17 14:56:29.930  INFO [product-composite,,] 1 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : Adding {logging-channel-adapter:_org.springframework.integration.errorLogger} as a subscriber to the 'errorChannel' channel
+2023-02-17 14:56:29.933  INFO [product-composite,,] 1 --- [           main] o.s.i.channel.PublishSubscribeChannel    : Channel 'product-composite.errorChannel' has 1 subscriber(s).
+2023-02-17 14:56:29.934  INFO [product-composite,,] 1 --- [           main] o.s.i.endpoint.EventDrivenConsumer       : started bean '_org.springframework.integration.errorLogger'
+2023-02-17 14:56:29.936  INFO [product-composite,,] 1 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: rabbit
+2023-02-17 14:56:30.651  INFO [product-composite,,] 1 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Attempting to connect to: [rabbitmq:5672]
+2023-02-17 14:56:30.679  INFO [product-composite,,] 1 --- [           main] o.s.a.r.c.CachingConnectionFactory       : Created new connection: rabbitConnectionFactory#4e671ef:0/SimpleConnection@1d628a88 [delegate=amqp://guest@10.96.137.188:5672/, localPort= 52144]
+2023-02-17 14:56:30.737  INFO [product-composite,,] 1 --- [           main] o.s.c.s.m.DirectWithAttributesChannel    : Channel 'product-composite.forwardedHeaderTransformer-out-0' has 1 subscriber(s).
+2023-02-17 14:56:30.738  INFO [product-composite,,] 1 --- [           main] o.s.c.s.binder.DefaultBinderFactory      : Retrieving cached binder: rabbit
+2023-02-17 14:56:30.993  INFO [product-composite,,] 1 --- [           main] c.s.b.r.p.RabbitExchangeQueueProvisioner : declaring queue for inbound: forwardedHeaderTransformer-in-0.anonymous.IbouIo2KSFe98cqg-GfQcw, bound to: forwardedHeaderTransformer-in-0
+2023-02-17 14:56:31.094  INFO [product-composite,,] 1 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'forwardedHeaderTransformer-in-0.anonymous.IbouIo2KSFe98cqg-GfQcw.errors' has 1 subscriber(s).
+2023-02-17 14:56:31.101  INFO [product-composite,,] 1 --- [           main] o.s.c.stream.binder.BinderErrorChannel   : Channel 'forwardedHeaderTransformer-in-0.anonymous.IbouIo2KSFe98cqg-GfQcw.errors' has 2 subscriber(s).
+2023-02-17 14:56:31.138  INFO [product-composite,,] 1 --- [           main] o.s.i.a.i.AmqpInboundChannelAdapter      : started bean 'inbound.forwardedHeaderTransformer-in-0.anonymous.IbouIo2KSFe98cqg-GfQcw'
+2023-02-17 14:56:31.404  INFO [product-composite,,] 1 --- [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 80
+2023-02-17 14:56:31.500  INFO [product-composite,,] 1 --- [           main] m.c.p.ProductCompositeServiceApplication : Started ProductCompositeServiceApplication in 27.942 seconds (JVM running for 29.102)
+2023-02-17 14:56:31.727 TRACE [product-composite,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a4edbcfa-1] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:56:31.734 TRACE [product-composite,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0499774a-2] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:56:31.945 TRACE [product-composite,c5469f2716a37f0a,c5469f2716a37f0a] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a4edbcfa-1] Completed 200 OK, headers={masked}
+2023-02-17 14:56:31.945 TRACE [product-composite,a1bfc2d83b7f82b9,a1bfc2d83b7f82b9] 1 --- [     parallel-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0499774a-2] Completed 200 OK, headers={masked}
+2023-02-17 14:56:41.590 TRACE [product-composite,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [936ed872-4] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:56:41.591 TRACE [product-composite,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [f329431c-3] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:56:41.601 TRACE [product-composite,ec752d1eb149a8fa,ec752d1eb149a8fa] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [f329431c-3] Completed 200 OK, headers={masked}
+2023-02-17 14:56:41.601 TRACE [product-composite,eb87c65e92b988f1,eb87c65e92b988f1] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [936ed872-4] Completed 200 OK, headers={masked}
+2023-02-17 14:56:51.589 TRACE [product-composite,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e68c81e4-6] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:56:51.589 TRACE [product-composite,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e859e409-5] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:56:51.596 TRACE [product-composite,054a6cd706c1f38e,054a6cd706c1f38e] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e68c81e4-6] Completed 200 OK, headers={masked}
+2023-02-17 14:56:51.597 TRACE [product-composite,5801e507f010e6f2,5801e507f010e6f2] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [e859e409-5] Completed 200 OK, headers={masked}
+2023-02-17 14:57:01.584 TRACE [product-composite,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a1590168-8] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:57:01.584 TRACE [product-composite,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0c83929a-7] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:57:01.595 TRACE [product-composite,e5f916d974cccaa0,e5f916d974cccaa0] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a1590168-8] Completed 200 OK, headers={masked}
+2023-02-17 14:57:01.616 TRACE [product-composite,109fb4513b2c514d,109fb4513b2c514d] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0c83929a-7] Completed 200 OK, headers={masked}
+2023-02-17 14:57:11.583 TRACE [product-composite,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [18e6f6e2-10] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:57:11.583 TRACE [product-composite,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b9180a01-9] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:57:11.588 TRACE [product-composite,df49fd3752efd256,df49fd3752efd256] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [18e6f6e2-10] Completed 200 OK, headers={masked}
+2023-02-17 14:57:11.589 TRACE [product-composite,7f79ff159e95a739,7f79ff159e95a739] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b9180a01-9] Completed 200 OK, headers={masked}
+2023-02-17 14:57:21.584 TRACE [product-composite,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b7a5cf86-11] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:57:21.584 TRACE [product-composite,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4ecbc487-12] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:57:21.592 TRACE [product-composite,3ea6ab089922e4e1,3ea6ab089922e4e1] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b7a5cf86-11] Completed 200 OK, headers={masked}
+2023-02-17 14:57:21.592 TRACE [product-composite,dedd4e115b005094,dedd4e115b005094] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4ecbc487-12] Completed 200 OK, headers={masked}
+2023-02-17 14:57:31.582 TRACE [product-composite,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c0c79067-14] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:57:31.582 TRACE [product-composite,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a689345c-13] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:57:31.587 TRACE [product-composite,d5ee104f5e4bf5dc,d5ee104f5e4bf5dc] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c0c79067-14] Completed 200 OK, headers={masked}
+2023-02-17 14:57:31.587 TRACE [product-composite,bbacc74bd3ee653f,bbacc74bd3ee653f] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a689345c-13] Completed 200 OK, headers={masked}
+2023-02-17 14:57:41.582 TRACE [product-composite,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a869d4f8-15] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:57:41.582 TRACE [product-composite,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [17ef2905-16] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:57:41.588 TRACE [product-composite,e139828bbc42de9e,e139828bbc42de9e] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a869d4f8-15] Completed 200 OK, headers={masked}
+2023-02-17 14:57:41.592 TRACE [product-composite,12fb8b4d77893c60,12fb8b4d77893c60] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [17ef2905-16] Completed 200 OK, headers={masked}
+2023-02-17 14:57:51.583 TRACE [product-composite,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [728f15e1-17] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:57:51.583 TRACE [product-composite,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [933fff50-18] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:57:51.591 TRACE [product-composite,ce34021776605af4,ce34021776605af4] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [728f15e1-17] Completed 200 OK, headers={masked}
+2023-02-17 14:57:51.591 TRACE [product-composite,af17a6545fa2013f,af17a6545fa2013f] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [933fff50-18] Completed 200 OK, headers={masked}
+2023-02-17 14:58:01.583 TRACE [product-composite,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [66cc18f9-20] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:58:01.583 TRACE [product-composite,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9e1ae5cb-19] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:58:01.590 TRACE [product-composite,e7f5f57597f77f18,e7f5f57597f77f18] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9e1ae5cb-19] Completed 200 OK, headers={masked}
+2023-02-17 14:58:01.590 TRACE [product-composite,28124d17356bbf1c,28124d17356bbf1c] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [66cc18f9-20] Completed 200 OK, headers={masked}
+2023-02-17 14:58:11.584 TRACE [product-composite,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [90494a70-22] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:58:11.584 TRACE [product-composite,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d0be8a9d-21] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:58:11.591 TRACE [product-composite,6c99a597377f0fef,6c99a597377f0fef] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [90494a70-22] Completed 200 OK, headers={masked}
+2023-02-17 14:58:11.591 TRACE [product-composite,fa174323ca307acd,fa174323ca307acd] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d0be8a9d-21] Completed 200 OK, headers={masked}
+2023-02-17 14:58:21.583 TRACE [product-composite,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [6749e792-24] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:58:21.583 TRACE [product-composite,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [af0c0836-23] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:58:21.589 TRACE [product-composite,bae16de754e9f58b,bae16de754e9f58b] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [6749e792-24] Completed 200 OK, headers={masked}
+2023-02-17 14:58:21.590 TRACE [product-composite,dfef78574c6035b5,dfef78574c6035b5] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [af0c0836-23] Completed 200 OK, headers={masked}
+2023-02-17 14:58:31.582 TRACE [product-composite,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [1e197fcd-25] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:58:31.582 TRACE [product-composite,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d17cd5f3-26] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:58:31.590 TRACE [product-composite,dced536ca824ab08,dced536ca824ab08] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [1e197fcd-25] Completed 200 OK, headers={masked}
+2023-02-17 14:58:31.592 TRACE [product-composite,0cf38d8d249d8a57,0cf38d8d249d8a57] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [d17cd5f3-26] Completed 200 OK, headers={masked}
+2023-02-17 14:58:41.582 TRACE [product-composite,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [794f781a-28] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:58:41.582 TRACE [product-composite,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0b2ad270-27] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:58:41.587 TRACE [product-composite,5cae16a93ec505b8,5cae16a93ec505b8] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [794f781a-28] Completed 200 OK, headers={masked}
+2023-02-17 14:58:41.588 TRACE [product-composite,827ab239f2ca0af4,827ab239f2ca0af4] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [0b2ad270-27] Completed 200 OK, headers={masked}
+2023-02-17 14:58:51.581 TRACE [product-composite,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [43fab52f-29] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:58:51.582 TRACE [product-composite,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [138338fe-30] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:58:51.584 TRACE [product-composite,a87fd23413c4fa80,a87fd23413c4fa80] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [43fab52f-29] Completed 200 OK, headers={masked}
+2023-02-17 14:58:51.585 TRACE [product-composite,3b4662d0cb36afd8,3b4662d0cb36afd8] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [138338fe-30] Completed 200 OK, headers={masked}
+2023-02-17 14:59:01.580 TRACE [product-composite,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [83278069-32] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:59:01.580 TRACE [product-composite,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [770d9c3d-31] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:59:01.584 TRACE [product-composite,cdb7995fb23c3017,cdb7995fb23c3017] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [83278069-32] Completed 200 OK, headers={masked}
+2023-02-17 14:59:01.587 TRACE [product-composite,08d64a1a5defa371,08d64a1a5defa371] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [770d9c3d-31] Completed 200 OK, headers={masked}
+2023-02-17 14:59:11.587 TRACE [product-composite,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b92d4697-34] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:59:11.587 TRACE [product-composite,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c5ff7450-33] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:59:11.600 TRACE [product-composite,74b4ecd4f5fb0acb,74b4ecd4f5fb0acb] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [c5ff7450-33] Completed 200 OK, headers={masked}
+2023-02-17 14:59:11.601 TRACE [product-composite,29c4f4393513f38b,29c4f4393513f38b] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [b92d4697-34] Completed 200 OK, headers={masked}
+2023-02-17 14:59:21.581 TRACE [product-composite,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9e28e029-36] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:59:21.581 TRACE [product-composite,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [abcae8e5-35] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:59:21.587 TRACE [product-composite,0595a02fe7724b51,0595a02fe7724b51] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [abcae8e5-35] Completed 200 OK, headers={masked}
+2023-02-17 14:59:21.590 TRACE [product-composite,74628c5d47da62c5,74628c5d47da62c5] 1 --- [     parallel-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [9e28e029-36] Completed 200 OK, headers={masked}
+2023-02-17 14:59:31.580 TRACE [product-composite,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [71fc23e0-37] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:59:31.580 TRACE [product-composite,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [8bad99ca-38] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:59:31.584 TRACE [product-composite,7eedf98863a3275d,7eedf98863a3275d] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [8bad99ca-38] Completed 200 OK, headers={masked}
+2023-02-17 14:59:31.586 TRACE [product-composite,f52761e71a406274,f52761e71a406274] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [71fc23e0-37] Completed 200 OK, headers={masked}
+2023-02-17 14:59:41.581 TRACE [product-composite,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [782cf1d4-40] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:59:41.581 TRACE [product-composite,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [95352daa-39] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:59:41.587 TRACE [product-composite,8568b75a8b6eb178,8568b75a8b6eb178] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [95352daa-39] Completed 200 OK, headers={masked}
+2023-02-17 14:59:41.588 TRACE [product-composite,3635b53679d04d72,3635b53679d04d72] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [782cf1d4-40] Completed 200 OK, headers={masked}
+2023-02-17 14:59:51.581 TRACE [product-composite,,] 1 --- [ctor-http-nio-3] o.s.w.s.adapter.HttpWebHandlerAdapter    : [a25c90cc-41] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 14:59:51.581 TRACE [product-composite,,] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [32e4726b-42] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 14:59:51.585 TRACE [product-composite,d8fdff000d7de8a6,d8fdff000d7de8a6] 1 --- [ctor-http-nio-2] o.s.w.s.adapter.HttpWebHandlerAdapter    : [32e4726b-42] Completed 200 OK, headers={masked}
+2023-02-17 15:00:01.580 TRACE [product-composite,,] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4290b44f-44] HTTP GET "/actuator/health/readiness", headers={masked}
+2023-02-17 15:00:01.580 TRACE [product-composite,,] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [8a71dd80-43] HTTP GET "/actuator/health/liveness", headers={masked}
+2023-02-17 15:00:01.583 TRACE [product-composite,9b8823ed20d06167,9b8823ed20d06167] 1 --- [ctor-http-nio-1] o.s.w.s.adapter.HttpWebHandlerAdapter    : [8a71dd80-43] Completed 200 OK, headers={masked}
+2023-02-17 15:00:01.584 TRACE [product-composite,d833073e4595e36a,d833073e4595e36a] 1 --- [ctor-http-nio-4] o.s.w.s.adapter.HttpWebHandlerAdapter    : [4290b44f-44] Completed 200 OK, headers={masked}

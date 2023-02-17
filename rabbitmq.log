@@ -1,0 +1,446 @@
+Configuring logger redirection
+2023-02-17 14:56:09.719 [debug] <0.287.0> Lager installed handler error_logger_lager_h into error_logger
+2023-02-17 14:56:09.737 [debug] <0.290.0> Lager installed handler lager_forwarder_backend into error_logger_lager_event
+2023-02-17 14:56:09.737 [debug] <0.293.0> Lager installed handler lager_forwarder_backend into rabbit_log_lager_event
+2023-02-17 14:56:09.737 [debug] <0.296.0> Lager installed handler lager_forwarder_backend into rabbit_log_channel_lager_event
+2023-02-17 14:56:09.737 [debug] <0.299.0> Lager installed handler lager_forwarder_backend into rabbit_log_connection_lager_event
+2023-02-17 14:56:09.737 [debug] <0.302.0> Lager installed handler lager_forwarder_backend into rabbit_log_feature_flags_lager_event
+2023-02-17 14:56:09.737 [debug] <0.305.0> Lager installed handler lager_forwarder_backend into rabbit_log_federation_lager_event
+2023-02-17 14:56:09.737 [debug] <0.308.0> Lager installed handler lager_forwarder_backend into rabbit_log_ldap_lager_event
+2023-02-17 14:56:09.737 [debug] <0.311.0> Lager installed handler lager_forwarder_backend into rabbit_log_mirroring_lager_event
+2023-02-17 14:56:09.737 [debug] <0.314.0> Lager installed handler lager_forwarder_backend into rabbit_log_prelaunch_lager_event
+2023-02-17 14:56:09.737 [debug] <0.320.0> Lager installed handler lager_forwarder_backend into rabbit_log_ra_lager_event
+2023-02-17 14:56:09.737 [debug] <0.317.0> Lager installed handler lager_forwarder_backend into rabbit_log_queue_lager_event
+2023-02-17 14:56:09.737 [debug] <0.323.0> Lager installed handler lager_forwarder_backend into rabbit_log_shovel_lager_event
+2023-02-17 14:56:09.737 [debug] <0.326.0> Lager installed handler lager_forwarder_backend into rabbit_log_upgrade_lager_event
+2023-02-17 14:56:09.741 [info] <0.44.0> Application lager started on node 'rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:09.830 [info] <0.44.0> Application mnesia started on node 'rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:09.831 [info] <0.272.0> 
+ Starting RabbitMQ 3.8.11 on Erlang 23.2.3
+ Copyright (c) 2007-2020 VMware, Inc. or its affiliates.
+ Licensed under the MPL 2.0. Website: https://rabbitmq.com
+
+  ##  ##      RabbitMQ 3.8.11
+  ##  ##
+  ##########  Copyright (c) 2007-2020 VMware, Inc. or its affiliates.
+  ######  ##
+  ##########  Licensed under the MPL 2.0. Website: https://rabbitmq.com
+
+  Doc guides: https://rabbitmq.com/documentation.html
+  Support:    https://rabbitmq.com/contact.html
+  Tutorials:  https://rabbitmq.com/getstarted.html
+  Monitoring: https://rabbitmq.com/monitoring.html
+
+  Logs: <stdout>
+
+  Config file(s): /etc/rabbitmq/rabbitmq.conf
+
+  Starting broker...2023-02-17 14:56:09.831 [info] <0.272.0> 
+ node           : rabbit@rabbitmq-cd46cc675-sx6s7
+ home dir       : /var/lib/rabbitmq
+ config file(s) : /etc/rabbitmq/rabbitmq.conf
+ cookie hash    : dPEHrGy9QQEAgSGPC1cp1A==
+ log(s)         : <stdout>
+ database dir   : /var/lib/rabbitmq/mnesia/rabbit@rabbitmq-cd46cc675-sx6s7
+2023-02-17 14:56:09.831 [warning] <0.272.0> Erlang VM is running with 1 I/O threads, file I/O performance may worsen
+2023-02-17 14:56:10.207 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:10.207 [info] <0.272.0> Feature flags:   [ ] drop_unroutable_metric
+2023-02-17 14:56:10.207 [info] <0.272.0> Feature flags:   [ ] empty_basic_get_metric
+2023-02-17 14:56:10.207 [info] <0.272.0> Feature flags:   [ ] implicit_default_bindings
+2023-02-17 14:56:10.207 [info] <0.272.0> Feature flags:   [ ] maintenance_mode_status
+2023-02-17 14:56:10.207 [info] <0.272.0> Feature flags:   [ ] quorum_queue
+2023-02-17 14:56:10.207 [info] <0.272.0> Feature flags:   [ ] user_limits
+2023-02-17 14:56:10.207 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:10.207 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:10.219 [debug] <0.283.0> Lager installed handler lager_backend_throttle into lager_event
+2023-02-17 14:56:11.310 [info] <0.272.0> Running boot step pre_boot defined by app rabbit
+2023-02-17 14:56:11.310 [info] <0.272.0> Running boot step rabbit_core_metrics defined by app rabbit
+2023-02-17 14:56:11.311 [info] <0.272.0> Running boot step rabbit_alarm defined by app rabbit
+2023-02-17 14:56:11.316 [info] <0.354.0> Memory high watermark set to 4382 MiB (4595443302 bytes) of 10956 MiB (11488608256 bytes) total
+2023-02-17 14:56:11.322 [info] <0.356.0> Enabling free disk space monitoring
+2023-02-17 14:56:11.322 [info] <0.356.0> Disk free limit set to 50MB
+2023-02-17 14:56:11.326 [info] <0.272.0> Running boot step code_server_cache defined by app rabbit
+2023-02-17 14:56:11.326 [info] <0.272.0> Running boot step file_handle_cache defined by app rabbit
+2023-02-17 14:56:11.326 [info] <0.359.0> Limiting to approx 1048479 file handles (943629 sockets)
+2023-02-17 14:56:11.326 [info] <0.360.0> FHC read buffering:  OFF
+2023-02-17 14:56:11.326 [info] <0.360.0> FHC write buffering: ON
+2023-02-17 14:56:11.326 [info] <0.272.0> Running boot step worker_pool defined by app rabbit
+2023-02-17 14:56:11.326 [info] <0.346.0> Will use 4 processes for default worker pool
+2023-02-17 14:56:11.327 [info] <0.346.0> Starting worker pool 'worker_pool' with 4 processes in it
+2023-02-17 14:56:11.327 [info] <0.272.0> Running boot step database defined by app rabbit
+2023-02-17 14:56:11.327 [info] <0.272.0> Node database directory at /var/lib/rabbitmq/mnesia/rabbit@rabbitmq-cd46cc675-sx6s7 is empty. Assuming we need to join an existing cluster or initialise from scratch...
+2023-02-17 14:56:11.327 [info] <0.272.0> Configured peer discovery backend: rabbit_peer_discovery_classic_config
+2023-02-17 14:56:11.327 [info] <0.272.0> Will try to lock with peer discovery backend rabbit_peer_discovery_classic_config
+2023-02-17 14:56:11.327 [info] <0.272.0> Peer discovery backend does not support locking, falling back to randomized delay
+2023-02-17 14:56:11.327 [info] <0.272.0> Peer discovery backend rabbit_peer_discovery_classic_config does not support registration, skipping randomized startup delay.
+2023-02-17 14:56:11.327 [info] <0.272.0> All discovered existing cluster peers: 
+2023-02-17 14:56:11.327 [info] <0.272.0> Discovered no peer nodes to cluster with. Some discovery backends can filter nodes out based on a readiness criteria. Enabling debug logging might help troubleshoot.
+2023-02-17 14:56:11.332 [info] <0.44.0> Application mnesia exited with reason: stopped
+2023-02-17 14:56:11.332 [info] <0.44.0> Application mnesia exited with reason: stopped
+2023-02-17 14:56:11.342 [info] <0.44.0> Application mnesia started on node 'rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.397 [info] <0.272.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+2023-02-17 14:56:11.397 [info] <0.272.0> Successfully synced tables from a peer
+2023-02-17 14:56:11.412 [info] <0.272.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+2023-02-17 14:56:11.412 [info] <0.272.0> Successfully synced tables from a peer
+2023-02-17 14:56:11.412 [info] <0.272.0> Feature flag `drop_unroutable_metric`: supported, attempt to enable...
+2023-02-17 14:56:11.412 [info] <0.272.0> Feature flag `drop_unroutable_metric`: mark as enabled=state_changing
+2023-02-17 14:56:11.418 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.418 [info] <0.272.0> Feature flags:   [~] drop_unroutable_metric
+2023-02-17 14:56:11.418 [info] <0.272.0> Feature flags:   [ ] empty_basic_get_metric
+2023-02-17 14:56:11.418 [info] <0.272.0> Feature flags:   [ ] implicit_default_bindings
+2023-02-17 14:56:11.418 [info] <0.272.0> Feature flags:   [ ] maintenance_mode_status
+2023-02-17 14:56:11.418 [info] <0.272.0> Feature flags:   [ ] quorum_queue
+2023-02-17 14:56:11.418 [info] <0.272.0> Feature flags:   [ ] user_limits
+2023-02-17 14:56:11.418 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:11.418 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.425 [info] <0.272.0> Feature flag `drop_unroutable_metric`: mark as enabled=true
+2023-02-17 14:56:11.431 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.431 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.431 [info] <0.272.0> Feature flags:   [ ] empty_basic_get_metric
+2023-02-17 14:56:11.431 [info] <0.272.0> Feature flags:   [ ] implicit_default_bindings
+2023-02-17 14:56:11.431 [info] <0.272.0> Feature flags:   [ ] maintenance_mode_status
+2023-02-17 14:56:11.431 [info] <0.272.0> Feature flags:   [ ] quorum_queue
+2023-02-17 14:56:11.431 [info] <0.272.0> Feature flags:   [ ] user_limits
+2023-02-17 14:56:11.431 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:11.431 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.438 [info] <0.272.0> Feature flag `empty_basic_get_metric`: supported, attempt to enable...
+2023-02-17 14:56:11.438 [info] <0.272.0> Feature flag `empty_basic_get_metric`: mark as enabled=state_changing
+2023-02-17 14:56:11.443 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.443 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.443 [info] <0.272.0> Feature flags:   [~] empty_basic_get_metric
+2023-02-17 14:56:11.443 [info] <0.272.0> Feature flags:   [ ] implicit_default_bindings
+2023-02-17 14:56:11.443 [info] <0.272.0> Feature flags:   [ ] maintenance_mode_status
+2023-02-17 14:56:11.443 [info] <0.272.0> Feature flags:   [ ] quorum_queue
+2023-02-17 14:56:11.443 [info] <0.272.0> Feature flags:   [ ] user_limits
+2023-02-17 14:56:11.443 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:11.443 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.450 [info] <0.272.0> Feature flag `empty_basic_get_metric`: mark as enabled=true
+2023-02-17 14:56:11.457 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.457 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.457 [info] <0.272.0> Feature flags:   [x] empty_basic_get_metric
+2023-02-17 14:56:11.457 [info] <0.272.0> Feature flags:   [ ] implicit_default_bindings
+2023-02-17 14:56:11.457 [info] <0.272.0> Feature flags:   [ ] maintenance_mode_status
+2023-02-17 14:56:11.457 [info] <0.272.0> Feature flags:   [ ] quorum_queue
+2023-02-17 14:56:11.457 [info] <0.272.0> Feature flags:   [ ] user_limits
+2023-02-17 14:56:11.457 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:11.457 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.465 [info] <0.272.0> Feature flag `implicit_default_bindings`: supported, attempt to enable...
+2023-02-17 14:56:11.465 [info] <0.272.0> Feature flag `implicit_default_bindings`: mark as enabled=state_changing
+2023-02-17 14:56:11.471 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.471 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.471 [info] <0.272.0> Feature flags:   [x] empty_basic_get_metric
+2023-02-17 14:56:11.471 [info] <0.272.0> Feature flags:   [~] implicit_default_bindings
+2023-02-17 14:56:11.471 [info] <0.272.0> Feature flags:   [ ] maintenance_mode_status
+2023-02-17 14:56:11.471 [info] <0.272.0> Feature flags:   [ ] quorum_queue
+2023-02-17 14:56:11.471 [info] <0.272.0> Feature flags:   [ ] user_limits
+2023-02-17 14:56:11.471 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:11.471 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.478 [info] <0.272.0> Waiting for Mnesia tables for 30000 ms, 0 retries left
+2023-02-17 14:56:11.478 [info] <0.272.0> Successfully synced tables from a peer
+2023-02-17 14:56:11.478 [info] <0.272.0> Feature flag `implicit_default_bindings`: mark as enabled=true
+2023-02-17 14:56:11.483 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.483 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.483 [info] <0.272.0> Feature flags:   [x] empty_basic_get_metric
+2023-02-17 14:56:11.483 [info] <0.272.0> Feature flags:   [x] implicit_default_bindings
+2023-02-17 14:56:11.483 [info] <0.272.0> Feature flags:   [ ] maintenance_mode_status
+2023-02-17 14:56:11.483 [info] <0.272.0> Feature flags:   [ ] quorum_queue
+2023-02-17 14:56:11.483 [info] <0.272.0> Feature flags:   [ ] user_limits
+2023-02-17 14:56:11.483 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:11.483 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.490 [info] <0.272.0> Feature flag `maintenance_mode_status`: supported, attempt to enable...
+2023-02-17 14:56:11.490 [info] <0.272.0> Feature flag `maintenance_mode_status`: mark as enabled=state_changing
+2023-02-17 14:56:11.495 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.495 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.495 [info] <0.272.0> Feature flags:   [x] empty_basic_get_metric
+2023-02-17 14:56:11.495 [info] <0.272.0> Feature flags:   [x] implicit_default_bindings
+2023-02-17 14:56:11.495 [info] <0.272.0> Feature flags:   [~] maintenance_mode_status
+2023-02-17 14:56:11.495 [info] <0.272.0> Feature flags:   [ ] quorum_queue
+2023-02-17 14:56:11.495 [info] <0.272.0> Feature flags:   [ ] user_limits
+2023-02-17 14:56:11.495 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:11.495 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.502 [info] <0.272.0> Creating table rabbit_node_maintenance_states for feature flag `maintenance_mode_status`
+2023-02-17 14:56:11.504 [info] <0.272.0> Feature flag `maintenance_mode_status`: mark as enabled=true
+2023-02-17 14:56:11.509 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.509 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.509 [info] <0.272.0> Feature flags:   [x] empty_basic_get_metric
+2023-02-17 14:56:11.509 [info] <0.272.0> Feature flags:   [x] implicit_default_bindings
+2023-02-17 14:56:11.509 [info] <0.272.0> Feature flags:   [x] maintenance_mode_status
+2023-02-17 14:56:11.509 [info] <0.272.0> Feature flags:   [ ] quorum_queue
+2023-02-17 14:56:11.509 [info] <0.272.0> Feature flags:   [ ] user_limits
+2023-02-17 14:56:11.509 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:11.509 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.516 [info] <0.272.0> Feature flag `quorum_queue`: supported, attempt to enable...
+2023-02-17 14:56:11.516 [info] <0.272.0> Feature flag `quorum_queue`: mark as enabled=state_changing
+2023-02-17 14:56:11.520 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.520 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.520 [info] <0.272.0> Feature flags:   [x] empty_basic_get_metric
+2023-02-17 14:56:11.520 [info] <0.272.0> Feature flags:   [x] implicit_default_bindings
+2023-02-17 14:56:11.520 [info] <0.272.0> Feature flags:   [x] maintenance_mode_status
+2023-02-17 14:56:11.520 [info] <0.272.0> Feature flags:   [~] quorum_queue
+2023-02-17 14:56:11.520 [info] <0.272.0> Feature flags:   [ ] user_limits
+2023-02-17 14:56:11.520 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:11.520 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.527 [info] <0.272.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+2023-02-17 14:56:11.527 [info] <0.272.0> Successfully synced tables from a peer
+2023-02-17 14:56:11.527 [info] <0.272.0> Feature flag `quorum_queue`:   migrating Mnesia table rabbit_queue...
+2023-02-17 14:56:11.538 [info] <0.272.0> Feature flag `quorum_queue`:   migrating Mnesia table rabbit_durable_queue...
+2023-02-17 14:56:11.559 [info] <0.272.0> Feature flag `quorum_queue`:   Mnesia tables migration done
+2023-02-17 14:56:11.559 [info] <0.272.0> Feature flag `quorum_queue`: mark as enabled=true
+2023-02-17 14:56:11.570 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.570 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.570 [info] <0.272.0> Feature flags:   [x] empty_basic_get_metric
+2023-02-17 14:56:11.570 [info] <0.272.0> Feature flags:   [x] implicit_default_bindings
+2023-02-17 14:56:11.570 [info] <0.272.0> Feature flags:   [x] maintenance_mode_status
+2023-02-17 14:56:11.570 [info] <0.272.0> Feature flags:   [x] quorum_queue
+2023-02-17 14:56:11.570 [info] <0.272.0> Feature flags:   [ ] user_limits
+2023-02-17 14:56:11.570 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:11.570 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.579 [info] <0.272.0> Feature flag `user_limits`: supported, attempt to enable...
+2023-02-17 14:56:11.579 [info] <0.272.0> Feature flag `user_limits`: mark as enabled=state_changing
+2023-02-17 14:56:11.586 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.586 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.586 [info] <0.272.0> Feature flags:   [x] empty_basic_get_metric
+2023-02-17 14:56:11.586 [info] <0.272.0> Feature flags:   [x] implicit_default_bindings
+2023-02-17 14:56:11.586 [info] <0.272.0> Feature flags:   [x] maintenance_mode_status
+2023-02-17 14:56:11.586 [info] <0.272.0> Feature flags:   [x] quorum_queue
+2023-02-17 14:56:11.586 [info] <0.272.0> Feature flags:   [~] user_limits
+2023-02-17 14:56:11.586 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:11.586 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.594 [info] <0.272.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+2023-02-17 14:56:11.594 [info] <0.272.0> Successfully synced tables from a peer
+2023-02-17 14:56:11.607 [info] <0.272.0> Feature flag `user_limits`: mark as enabled=true
+2023-02-17 14:56:11.615 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.615 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.615 [info] <0.272.0> Feature flags:   [x] empty_basic_get_metric
+2023-02-17 14:56:11.615 [info] <0.272.0> Feature flags:   [x] implicit_default_bindings
+2023-02-17 14:56:11.615 [info] <0.272.0> Feature flags:   [x] maintenance_mode_status
+2023-02-17 14:56:11.615 [info] <0.272.0> Feature flags:   [x] quorum_queue
+2023-02-17 14:56:11.615 [info] <0.272.0> Feature flags:   [x] user_limits
+2023-02-17 14:56:11.615 [info] <0.272.0> Feature flags:   [ ] virtual_host_metadata
+2023-02-17 14:56:11.615 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.622 [info] <0.272.0> Feature flag `virtual_host_metadata`: supported, attempt to enable...
+2023-02-17 14:56:11.622 [info] <0.272.0> Feature flag `virtual_host_metadata`: mark as enabled=state_changing
+2023-02-17 14:56:11.626 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.626 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.626 [info] <0.272.0> Feature flags:   [x] empty_basic_get_metric
+2023-02-17 14:56:11.626 [info] <0.272.0> Feature flags:   [x] implicit_default_bindings
+2023-02-17 14:56:11.627 [info] <0.272.0> Feature flags:   [x] maintenance_mode_status
+2023-02-17 14:56:11.627 [info] <0.272.0> Feature flags:   [x] quorum_queue
+2023-02-17 14:56:11.627 [info] <0.272.0> Feature flags:   [x] user_limits
+2023-02-17 14:56:11.627 [info] <0.272.0> Feature flags:   [~] virtual_host_metadata
+2023-02-17 14:56:11.627 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.634 [info] <0.272.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+2023-02-17 14:56:11.634 [info] <0.272.0> Successfully synced tables from a peer
+2023-02-17 14:56:11.644 [info] <0.272.0> Feature flag `virtual_host_metadata`: mark as enabled=true
+2023-02-17 14:56:11.649 [info] <0.272.0> Feature flags: list of feature flags found:
+2023-02-17 14:56:11.649 [info] <0.272.0> Feature flags:   [x] drop_unroutable_metric
+2023-02-17 14:56:11.649 [info] <0.272.0> Feature flags:   [x] empty_basic_get_metric
+2023-02-17 14:56:11.649 [info] <0.272.0> Feature flags:   [x] implicit_default_bindings
+2023-02-17 14:56:11.649 [info] <0.272.0> Feature flags:   [x] maintenance_mode_status
+2023-02-17 14:56:11.650 [info] <0.272.0> Feature flags:   [x] quorum_queue
+2023-02-17 14:56:11.650 [info] <0.272.0> Feature flags:   [x] user_limits
+2023-02-17 14:56:11.650 [info] <0.272.0> Feature flags:   [x] virtual_host_metadata
+2023-02-17 14:56:11.650 [info] <0.272.0> Feature flags: feature flag states written to disk: yes
+2023-02-17 14:56:11.656 [info] <0.272.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+2023-02-17 14:56:11.656 [info] <0.272.0> Successfully synced tables from a peer
+2023-02-17 14:56:11.673 [info] <0.272.0> Waiting for Mnesia tables for 30000 ms, 9 retries left
+2023-02-17 14:56:11.673 [info] <0.272.0> Successfully synced tables from a peer
+2023-02-17 14:56:11.673 [info] <0.272.0> Peer discovery backend rabbit_peer_discovery_classic_config does not support registration, skipping registration.
+2023-02-17 14:56:11.673 [info] <0.272.0> Running boot step database_sync defined by app rabbit
+2023-02-17 14:56:11.673 [info] <0.272.0> Running boot step feature_flags defined by app rabbit
+2023-02-17 14:56:11.673 [info] <0.272.0> Running boot step codec_correctness_check defined by app rabbit
+2023-02-17 14:56:11.673 [info] <0.272.0> Running boot step external_infrastructure defined by app rabbit
+2023-02-17 14:56:11.673 [info] <0.272.0> Running boot step rabbit_registry defined by app rabbit
+2023-02-17 14:56:11.673 [info] <0.272.0> Running boot step rabbit_auth_mechanism_cr_demo defined by app rabbit
+2023-02-17 14:56:11.673 [info] <0.272.0> Running boot step rabbit_queue_location_random defined by app rabbit
+2023-02-17 14:56:11.673 [info] <0.272.0> Running boot step rabbit_event defined by app rabbit
+2023-02-17 14:56:11.673 [info] <0.272.0> Running boot step rabbit_auth_mechanism_amqplain defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_auth_mechanism_plain defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_exchange_type_direct defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_exchange_type_fanout defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_exchange_type_headers defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_exchange_type_topic defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_mirror_queue_mode_all defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_mirror_queue_mode_exactly defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_mirror_queue_mode_nodes defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_priority_queue defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Priority queues enabled, real BQ is rabbit_variable_queue
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_queue_location_client_local defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_queue_location_min_masters defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step kernel_ready defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_sysmon_minder defined by app rabbit
+2023-02-17 14:56:11.674 [info] <0.272.0> Running boot step rabbit_epmd_monitor defined by app rabbit
+2023-02-17 14:56:11.675 [info] <0.618.0> epmd monitor knows us, inter-node communication (distribution) port: 25672
+2023-02-17 14:56:11.676 [info] <0.272.0> Running boot step guid_generator defined by app rabbit
+2023-02-17 14:56:11.677 [info] <0.272.0> Running boot step rabbit_node_monitor defined by app rabbit
+2023-02-17 14:56:11.677 [info] <0.622.0> Starting rabbit_node_monitor
+2023-02-17 14:56:11.678 [info] <0.272.0> Running boot step delegate_sup defined by app rabbit
+2023-02-17 14:56:11.678 [info] <0.272.0> Running boot step rabbit_memory_monitor defined by app rabbit
+2023-02-17 14:56:11.678 [info] <0.272.0> Running boot step core_initialized defined by app rabbit
+2023-02-17 14:56:11.678 [info] <0.272.0> Running boot step upgrade_queues defined by app rabbit
+2023-02-17 14:56:11.691 [info] <0.272.0> message_store upgrades: 1 to apply
+2023-02-17 14:56:11.691 [info] <0.272.0> message_store upgrades: Applying rabbit_variable_queue:move_messages_to_vhost_store
+2023-02-17 14:56:11.691 [info] <0.272.0> message_store upgrades: No durable queues found. Skipping message store migration
+2023-02-17 14:56:11.691 [info] <0.272.0> message_store upgrades: Removing the old message store data
+2023-02-17 14:56:11.691 [info] <0.272.0> message_store upgrades: All upgrades applied successfully
+2023-02-17 14:56:11.707 [info] <0.272.0> Running boot step channel_tracking defined by app rabbit
+2023-02-17 14:56:11.710 [info] <0.272.0> Setting up a table for channel tracking on this node: 'tracked_channel_on_node_rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.712 [info] <0.272.0> Setting up a table for channel tracking on this node: 'tracked_channel_table_per_user_on_node_rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.712 [info] <0.272.0> Running boot step rabbit_channel_tracking_handler defined by app rabbit
+2023-02-17 14:56:11.712 [info] <0.272.0> Running boot step connection_tracking defined by app rabbit
+2023-02-17 14:56:11.716 [info] <0.272.0> Setting up a table for connection tracking on this node: 'tracked_connection_on_node_rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.717 [info] <0.272.0> Setting up a table for per-vhost connection counting on this node: 'tracked_connection_per_vhost_on_node_rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.719 [info] <0.272.0> Setting up a table for per-user connection counting on this node: 'tracked_connection_table_per_user_on_node_rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.719 [info] <0.272.0> Running boot step rabbit_connection_tracking_handler defined by app rabbit
+2023-02-17 14:56:11.719 [info] <0.272.0> Running boot step rabbit_exchange_parameters defined by app rabbit
+2023-02-17 14:56:11.720 [info] <0.272.0> Running boot step rabbit_mirror_queue_misc defined by app rabbit
+2023-02-17 14:56:11.720 [info] <0.272.0> Running boot step rabbit_policies defined by app rabbit
+2023-02-17 14:56:11.720 [info] <0.272.0> Running boot step rabbit_policy defined by app rabbit
+2023-02-17 14:56:11.720 [info] <0.272.0> Running boot step rabbit_queue_location_validator defined by app rabbit
+2023-02-17 14:56:11.720 [info] <0.272.0> Running boot step rabbit_quorum_memory_manager defined by app rabbit
+2023-02-17 14:56:11.720 [info] <0.272.0> Running boot step rabbit_vhost_limit defined by app rabbit
+2023-02-17 14:56:11.721 [info] <0.272.0> Running boot step rabbit_mgmt_reset_handler defined by app rabbitmq_management
+2023-02-17 14:56:11.721 [info] <0.272.0> Running boot step rabbit_mgmt_db_handler defined by app rabbitmq_management_agent
+2023-02-17 14:56:11.721 [info] <0.272.0> Management plugin: using rates mode 'basic'
+2023-02-17 14:56:11.721 [info] <0.272.0> Running boot step recovery defined by app rabbit
+2023-02-17 14:56:11.721 [info] <0.272.0> Running boot step empty_db_check defined by app rabbit
+2023-02-17 14:56:11.721 [info] <0.272.0> Will seed default virtual host and user...
+2023-02-17 14:56:11.721 [info] <0.272.0> Adding vhost '/' (description: 'Default virtual host')
+2023-02-17 14:56:11.734 [info] <0.681.0> Making sure data directory '/var/lib/rabbitmq/mnesia/rabbit@rabbitmq-cd46cc675-sx6s7/msg_stores/vhosts/628WB79CIFDYO9LJI6DKMI09L' for vhost '/' exists
+2023-02-17 14:56:11.737 [info] <0.681.0> Starting message stores for vhost '/'
+2023-02-17 14:56:11.737 [info] <0.685.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_transient": using rabbit_msg_store_ets_index to provide index
+2023-02-17 14:56:11.738 [info] <0.681.0> Started message store of type transient for vhost '/'
+2023-02-17 14:56:11.739 [info] <0.689.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": using rabbit_msg_store_ets_index to provide index
+2023-02-17 14:56:11.739 [warning] <0.689.0> Message store "628WB79CIFDYO9LJI6DKMI09L/msg_store_persistent": rebuilding indices from scratch
+2023-02-17 14:56:11.740 [info] <0.681.0> Started message store of type persistent for vhost '/'
+2023-02-17 14:56:11.742 [info] <0.272.0> Created user 'guest'
+2023-02-17 14:56:11.743 [info] <0.272.0> Successfully set user tags for user 'guest' to [administrator]
+2023-02-17 14:56:11.745 [info] <0.272.0> Successfully set permissions for 'guest' in virtual host '/' to '.*', '.*', '.*'
+2023-02-17 14:56:11.745 [info] <0.272.0> Running boot step rabbit_looking_glass defined by app rabbit
+2023-02-17 14:56:11.745 [info] <0.272.0> Running boot step rabbit_core_metrics_gc defined by app rabbit
+2023-02-17 14:56:11.746 [info] <0.272.0> Running boot step background_gc defined by app rabbit
+2023-02-17 14:56:11.746 [info] <0.272.0> Running boot step routing_ready defined by app rabbit
+2023-02-17 14:56:11.746 [info] <0.272.0> Running boot step pre_flight defined by app rabbit
+2023-02-17 14:56:11.746 [info] <0.272.0> Running boot step notify_cluster defined by app rabbit
+2023-02-17 14:56:11.746 [info] <0.272.0> Running boot step networking defined by app rabbit
+2023-02-17 14:56:11.746 [info] <0.272.0> Running boot step definition_import_worker_pool defined by app rabbit
+2023-02-17 14:56:11.746 [info] <0.346.0> Starting worker pool 'definition_import_pool' with 4 processes in it
+2023-02-17 14:56:11.746 [info] <0.272.0> Running boot step cluster_name defined by app rabbit
+2023-02-17 14:56:11.746 [info] <0.272.0> Initialising internal cluster ID to 'rabbitmq-cluster-id-phNsTgRUjrvIwEXZzW2sXg'
+2023-02-17 14:56:11.748 [info] <0.272.0> Running boot step direct_client defined by app rabbit
+2023-02-17 14:56:11.748 [info] <0.272.0> Running boot step rabbit_management_load_definitions defined by app rabbitmq_management
+2023-02-17 14:56:11.748 [info] <0.722.0> Resetting node maintenance status
+2023-02-17 14:56:11.748 [info] <0.44.0> Application rabbit started on node 'rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.752 [info] <0.44.0> Application rabbitmq_management_agent started on node 'rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.752 [info] <0.44.0> Application cowlib started on node 'rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.752 [info] <0.44.0> Application cowboy started on node 'rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.752 [info] <0.44.0> Application rabbitmq_web_dispatch started on node 'rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.753 [info] <0.44.0> Application amqp_client started on node 'rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.773 [info] <0.781.0> Management plugin: HTTP (non-TLS) listener started on port 15672
+2023-02-17 14:56:11.774 [info] <0.887.0> Statistics database started.
+2023-02-17 14:56:11.774 [info] <0.886.0> Starting worker pool 'management_worker_pool' with 3 processes in it
+2023-02-17 14:56:11.774 [info] <0.44.0> Application rabbitmq_management started on node 'rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.791 [info] <0.44.0> Application prometheus started on node 'rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.792 [info] <0.900.0> Prometheus metrics: HTTP (non-TLS) listener started on port 15692
+2023-02-17 14:56:11.792 [info] <0.722.0> Ready to start client connection listeners
+2023-02-17 14:56:11.792 [info] <0.44.0> Application rabbitmq_prometheus started on node 'rabbit@rabbitmq-cd46cc675-sx6s7'
+2023-02-17 14:56:11.794 [info] <0.1019.0> started TCP listener on [::]:5672
+2023-02-17 14:56:11.935 [info] <0.722.0> Server startup complete; 4 plugins started.
+ * rabbitmq_prometheus
+ * rabbitmq_management
+ * rabbitmq_web_dispatch
+ * rabbitmq_management_agent
+ completed with 4 plugins.
+2023-02-17 14:56:11.935 [info] <0.722.0> Resetting node maintenance status
+2023-02-17 14:56:14.523 [warning] <0.1023.0> AMQP 0-9-1 client call timeout was 60000 ms, is updated to a safe effective value of 130000 ms
+2023-02-17 14:56:14.555 [info] <0.1048.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1026.0>">>' because it has been closed
+2023-02-17 14:56:18.786 [info] <0.1051.0> accepting AMQP connection <0.1051.0> (172.17.0.1:63384 -> 172.17.0.3:5672)
+2023-02-17 14:56:18.949 [info] <0.1051.0> connection <0.1051.0> (172.17.0.1:63384 -> 172.17.0.3:5672): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:19.526 [info] <0.1084.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1067.0>">>' because it has been closed
+2023-02-17 14:56:19.743 [info] <0.1087.0> accepting AMQP connection <0.1087.0> (172.17.0.1:19480 -> 172.17.0.3:5672)
+2023-02-17 14:56:19.790 [info] <0.1087.0> connection <0.1087.0> (172.17.0.1:19480 -> 172.17.0.3:5672): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:23.729 [info] <0.1100.0> accepting AMQP connection <0.1100.0> (172.17.0.1:11546 -> 172.17.0.3:5672)
+2023-02-17 14:56:23.902 [info] <0.1100.0> connection <0.1100.0> (172.17.0.1:11546 -> 172.17.0.3:5672): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:24.538 [info] <0.1133.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1116.0>">>' because it has been closed
+2023-02-17 14:56:24.757 [info] <0.1136.0> accepting AMQP connection <0.1136.0> (172.17.0.1:20242 -> 172.17.0.3:5672)
+2023-02-17 14:56:24.830 [info] <0.1136.0> connection <0.1136.0> (172.17.0.1:20242 -> 172.17.0.3:5672): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:26.598 [info] <0.1149.0> accepting AMQP connection <0.1149.0> (172.17.0.1:29268 -> 172.17.0.3:5672)
+2023-02-17 14:56:26.655 [info] <0.1149.0> connection <0.1149.0> (172.17.0.1:29268 -> 172.17.0.3:5672): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:27.505 [info] <0.1162.0> accepting AMQP connection <0.1162.0> (172.17.0.1:31386 -> 172.17.0.3:5672)
+2023-02-17 14:56:27.581 [info] <0.1162.0> connection <0.1162.0> (172.17.0.1:31386 -> 172.17.0.3:5672): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:27.815 [info] <0.1175.0> accepting AMQP connection <0.1175.0> (172.17.0.1:62953 -> 172.17.0.3:5672)
+2023-02-17 14:56:27.852 [info] <0.1175.0> Connection <0.1175.0> (172.17.0.1:62953 -> 172.17.0.3:5672) has a client-provided name: rabbitConnectionFactory#37364634:0
+2023-02-17 14:56:27.873 [info] <0.1175.0> connection <0.1175.0> (172.17.0.1:62953 -> 172.17.0.3:5672 - rabbitConnectionFactory#37364634:0): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:29.547 [info] <0.1221.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1204.0>">>' because it has been closed
+2023-02-17 14:56:30.098 [info] <0.1224.0> accepting AMQP connection <0.1224.0> (172.17.0.1:56589 -> 172.17.0.3:5672)
+2023-02-17 14:56:30.108 [info] <0.1224.0> Connection <0.1224.0> (172.17.0.1:56589 -> 172.17.0.3:5672) has a client-provided name: rabbitConnectionFactory#5e9cb95:0
+2023-02-17 14:56:30.111 [info] <0.1224.0> connection <0.1224.0> (172.17.0.1:56589 -> 172.17.0.3:5672 - rabbitConnectionFactory#5e9cb95:0): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:30.655 [info] <0.1237.0> accepting AMQP connection <0.1237.0> (172.17.0.1:14760 -> 172.17.0.3:5672)
+2023-02-17 14:56:30.664 [info] <0.1237.0> Connection <0.1237.0> (172.17.0.1:14760 -> 172.17.0.3:5672) has a client-provided name: rabbitConnectionFactory#4e671ef:0
+2023-02-17 14:56:30.670 [info] <0.1237.0> connection <0.1237.0> (172.17.0.1:14760 -> 172.17.0.3:5672 - rabbitConnectionFactory#4e671ef:0): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:31.390 [info] <0.1262.0> accepting AMQP connection <0.1262.0> (172.17.0.1:44345 -> 172.17.0.3:5672)
+2023-02-17 14:56:31.401 [info] <0.1262.0> Connection <0.1262.0> (172.17.0.1:44345 -> 172.17.0.3:5672) has a client-provided name: rabbitConnectionFactory#377e90b0:0
+2023-02-17 14:56:31.404 [info] <0.1262.0> connection <0.1262.0> (172.17.0.1:44345 -> 172.17.0.3:5672 - rabbitConnectionFactory#377e90b0:0): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:31.813 [info] <0.1287.0> accepting AMQP connection <0.1287.0> (172.17.0.1:25495 -> 172.17.0.3:5672)
+2023-02-17 14:56:31.829 [info] <0.1287.0> Connection <0.1287.0> (172.17.0.1:25495 -> 172.17.0.3:5672) has a client-provided name: rabbitConnectionFactory#1d7914a5:0
+2023-02-17 14:56:31.840 [info] <0.1287.0> connection <0.1287.0> (172.17.0.1:25495 -> 172.17.0.3:5672 - rabbitConnectionFactory#1d7914a5:0): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:34.002 [info] <0.1318.0> accepting AMQP connection <0.1318.0> (172.17.0.1:17302 -> 172.17.0.3:5672)
+2023-02-17 14:56:34.021 [info] <0.1318.0> connection <0.1318.0> (172.17.0.1:17302 -> 172.17.0.3:5672): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:34.027 [error] <0.1327.0> Channel error on connection <0.1318.0> (172.17.0.1:17302 -> 172.17.0.3:5672, vhost: '/', user: 'guest'), channel 1:
+operation queue.declare caused a channel exception not_found: no queue 'zipkin' in vhost '/'
+2023-02-17 14:56:34.528 [info] <0.1368.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1351.0>">>' because it has been closed
+2023-02-17 14:56:39.526 [info] <0.1391.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1374.0>">>' because it has been closed
+2023-02-17 14:56:40.799 [info] <0.1399.0> accepting AMQP connection <0.1399.0> (172.17.0.1:22124 -> 172.17.0.3:5672)
+2023-02-17 14:56:40.800 [info] <0.1399.0> Connection <0.1399.0> (172.17.0.1:22124 -> 172.17.0.3:5672) has a client-provided name: rabbitConnectionFactory#3df04fa1:0
+2023-02-17 14:56:40.803 [info] <0.1399.0> connection <0.1399.0> (172.17.0.1:22124 -> 172.17.0.3:5672 - rabbitConnectionFactory#3df04fa1:0): user 'guest' authenticated and granted access to vhost '/'
+2023-02-17 14:56:44.526 [info] <0.1437.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1420.0>">>' because it has been closed
+2023-02-17 14:56:49.525 [info] <0.1460.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1443.0>">>' because it has been closed
+2023-02-17 14:56:54.525 [info] <0.1483.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1466.0>">>' because it has been closed
+2023-02-17 14:56:59.523 [info] <0.1506.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1489.0>">>' because it has been closed
+2023-02-17 14:57:04.522 [info] <0.1529.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1512.0>">>' because it has been closed
+2023-02-17 14:57:09.521 [info] <0.1552.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1535.0>">>' because it has been closed
+2023-02-17 14:57:14.523 [info] <0.1575.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1558.0>">>' because it has been closed
+2023-02-17 14:57:19.520 [info] <0.1598.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1581.0>">>' because it has been closed
+2023-02-17 14:57:24.521 [info] <0.1621.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1604.0>">>' because it has been closed
+2023-02-17 14:57:29.521 [info] <0.1644.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1627.0>">>' because it has been closed
+2023-02-17 14:57:34.520 [info] <0.1667.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1650.0>">>' because it has been closed
+2023-02-17 14:57:39.519 [info] <0.1690.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1673.0>">>' because it has been closed
+2023-02-17 14:57:44.521 [info] <0.1713.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1696.0>">>' because it has been closed
+2023-02-17 14:57:49.520 [info] <0.1736.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1719.0>">>' because it has been closed
+2023-02-17 14:57:54.518 [info] <0.1759.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1742.0>">>' because it has been closed
+2023-02-17 14:57:59.519 [info] <0.1782.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1765.0>">>' because it has been closed
+2023-02-17 14:58:04.520 [info] <0.1805.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1788.0>">>' because it has been closed
+2023-02-17 14:58:09.523 [info] <0.1829.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1812.0>">>' because it has been closed
+2023-02-17 14:58:14.521 [info] <0.1852.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1835.0>">>' because it has been closed
+2023-02-17 14:58:19.523 [info] <0.1875.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1858.0>">>' because it has been closed
+2023-02-17 14:58:24.520 [info] <0.1898.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1881.0>">>' because it has been closed
+2023-02-17 14:58:29.519 [info] <0.1921.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1904.0>">>' because it has been closed
+2023-02-17 14:58:34.518 [info] <0.1944.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1927.0>">>' because it has been closed
+2023-02-17 14:58:39.518 [info] <0.1967.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1950.0>">>' because it has been closed
+2023-02-17 14:58:44.520 [info] <0.1990.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1973.0>">>' because it has been closed
+2023-02-17 14:58:49.517 [info] <0.2013.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.1996.0>">>' because it has been closed
+2023-02-17 14:58:54.519 [info] <0.2036.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2019.0>">>' because it has been closed
+2023-02-17 14:58:59.518 [info] <0.2059.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2042.0>">>' because it has been closed
+2023-02-17 14:59:04.520 [info] <0.2082.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2065.0>">>' because it has been closed
+2023-02-17 14:59:09.521 [info] <0.2105.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2088.0>">>' because it has been closed
+2023-02-17 14:59:14.519 [info] <0.2150.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2133.0>">>' because it has been closed
+2023-02-17 14:59:19.521 [info] <0.2173.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2156.0>">>' because it has been closed
+2023-02-17 14:59:24.521 [info] <0.2196.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2179.0>">>' because it has been closed
+2023-02-17 14:59:29.519 [info] <0.2219.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2202.0>">>' because it has been closed
+2023-02-17 14:59:34.520 [info] <0.2242.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2225.0>">>' because it has been closed
+2023-02-17 14:59:39.519 [info] <0.2265.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2248.0>">>' because it has been closed
+2023-02-17 14:59:44.518 [info] <0.2288.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2271.0>">>' because it has been closed
+2023-02-17 14:59:49.518 [info] <0.2311.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2294.0>">>' because it has been closed
+2023-02-17 14:59:54.519 [info] <0.2334.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2317.0>">>' because it has been closed
+2023-02-17 14:59:59.517 [info] <0.2357.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2340.0>">>' because it has been closed
+2023-02-17 15:00:04.517 [info] <0.2380.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2363.0>">>' because it has been closed
+2023-02-17 15:00:09.516 [info] <0.2404.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2387.0>">>' because it has been closed
+2023-02-17 15:00:14.516 [info] <0.2427.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2410.0>">>' because it has been closed
+2023-02-17 15:00:19.519 [info] <0.2450.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2433.0>">>' because it has been closed
+2023-02-17 15:00:24.517 [info] <0.2473.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2456.0>">>' because it has been closed
+2023-02-17 15:00:29.523 [info] <0.2496.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2479.0>">>' because it has been closed
+2023-02-17 15:00:34.516 [info] <0.2519.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2502.0>">>' because it has been closed
+2023-02-17 15:00:39.518 [info] <0.2542.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2525.0>">>' because it has been closed
+2023-02-17 15:00:44.518 [info] <0.2565.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2548.0>">>' because it has been closed
+2023-02-17 15:00:49.517 [info] <0.2588.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2571.0>">>' because it has been closed
+2023-02-17 15:00:54.516 [info] <0.2611.0> Closing all channels from connection '<<"<rabbit@rabbitmq-cd46cc675-sx6s7.1676645769.2594.0>">>' because it has been closed
